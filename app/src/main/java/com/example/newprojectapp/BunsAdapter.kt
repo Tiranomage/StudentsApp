@@ -5,35 +5,33 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageButton
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class GroupsAdapter(var groups: List<Group>, var context: Context) : RecyclerView.Adapter<GroupsAdapter.MyViewHolder>() {
+class BunsAdapter(var buns: List<Bun>, var context: Context) : RecyclerView.Adapter<BunsAdapter.MyViewHolder>() {
 
     class MyViewHolder(view: View): RecyclerView.ViewHolder(view) {
-        val image: ImageButton = view.findViewById(R.id.group_list_image)
-        val title: TextView = view.findViewById(R.id.group_list_title)
-        val desc: TextView = view.findViewById(R.id.group_list_desc)
+        val image: ImageButton = view.findViewById(R.id.bun_list_image)
+        val title: TextView = view.findViewById(R.id.bun_list_title)
+        val desc: TextView = view.findViewById(R.id.bun_list_desc)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.groups_in_list, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.bun_in_list, parent, false)
         return MyViewHolder(view)
     }
 
     override fun getItemCount(): Int {
-        return groups.count()
+        return buns.count()
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.title.text = groups[position].title
-        holder.desc.text = groups[position].desc
+        holder.title.text = buns[position].title
+        holder.desc.text = buns[position].desc
 
         var imageId = context.resources.getIdentifier(
-            groups[position].image,
+            buns[position].image,
             "drawable",
             context.packageName
         )
@@ -43,8 +41,8 @@ class GroupsAdapter(var groups: List<Group>, var context: Context) : RecyclerVie
         holder.image.setOnClickListener {
             val intent = Intent(context, EventDescActivity::class.java)
 
-            intent.putExtra("groupImgId", imageId)
-            intent.putExtra("groupTitle", groups[position].title)
+            intent.putExtra("bunImgId", imageId)
+            intent.putExtra("bunTitle", buns[position].title)
 
             context.startActivity(intent)
         }

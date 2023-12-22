@@ -32,5 +32,15 @@ class MenuActivity : AppCompatActivity() {
             val intent = Intent(this, GroupsActivity::class.java)
             startActivity(intent)
         }
+
+        colivingButton.setOnClickListener {
+            val intent = Intent(this, ColivingAuthActivity::class.java)
+            startActivity(intent)
+        }
+
+        bunButton.setOnClickListener {
+            val intent = Intent(this, BunActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

@@ -6,22 +6,22 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 
-class MainActivity : AppCompatActivity() {
+class ColivingAuthActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_coliving_auth)
 
-        val authButton: Button = findViewById(R.id.auth_button)
-        val regText: TextView = findViewById(R.id.reg_text)
+        val authButton: Button = findViewById(R.id.coliving_auth_button)
+        val regText: TextView = findViewById(R.id.coliving_reg_text)
 
         regText.setOnClickListener {
             val intent = Intent(this, RegActivity::class.java)
             startActivity(intent)
         }
 
-        authButton.setOnClickListener {
+        /*authButton.setOnClickListener {
             val intent = Intent(this, AuthActivity::class.java)
             startActivity(intent)
-        }
+        }*/
     }
 }
