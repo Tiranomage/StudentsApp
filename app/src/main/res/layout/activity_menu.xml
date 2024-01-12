@@ -1,126 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
     tools:context=".MenuActivity">
 
+    <!-- Application Name -->
     <TextView
-        android:id="@+id/greeting_text"
-        android:layout_width="288dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="24dp"
-        android:text="Привет, Пользователь!"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/app_name"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:fontFamily="@font/mont_semibold"
+        android:text="URFU.Aparts"
+        android:gravity="bottom"
+        android:textColor="@color/white"
+        android:background="#1E4391"
+        android:textSize="19sp"
+        android:padding="16dp"/>
 
-    <Button
-        android:id="@+id/news_button"
-        android:layout_width="100dp"
-        android:layout_height="36dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="128dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="32dp"
-        android:backgroundTint="#FF9228"
-        android:text="Читать"
-        android:textSize="13dp"
-        app:cornerRadius="6dp"
-        app:layout_constraintBottom_toTopOf="@+id/useful_text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.09"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/greeting_text" />
+    <!-- Scrolling Text with Pictures -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/app_name">
 
-    <TextView
-        android:id="@+id/useful_text"
-        android:layout_width="176dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="290dp"
-        android:layout_marginEnd="24dp"
-        android:text="Может быть полезно"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
 
-    <ImageButton
-        android:id="@+id/coliving_button"
-        android:layout_width="150dp"
-        android:layout_height="170dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="#AFECFE"
-        android:src="@android:drawable/btn_star"
-        app:layout_constraintBottom_toTopOf="@+id/far_events"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/useful_text" />
+            <!-- Your scrolling text and pictures go here -->
 
-    <ImageButton
-        android:id="@+id/groups_button"
-        android:layout_width="156dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="24dp"
-        android:backgroundTint="#BEAFFE"
-        android:src="@android:drawable/btn_star"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/coliving_button"
-        app:layout_constraintTop_toBottomOf="@+id/useful_text" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
-    <ImageButton
-        android:id="@+id/bun_button"
-        android:layout_width="156dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="20dp"
-        android:backgroundTint="#FFD6AD"
-        android:src="@android:drawable/btn_star"
-        app:layout_constraintBottom_toTopOf="@+id/far_events"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/coliving_button"
-        app:layout_constraintTop_toBottomOf="@+id/groups_button" />
+    <!-- Bottom Menu with Buttons and Pictures -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:layout_alignParentBottom="true">
 
-    <TextView
-        android:id="@+id/far_events"
-        android:layout_width="220dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginEnd="24dp"
-        android:text="Ближайшие мероприятия"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/useful_text" />
+        <!-- Button 1 -->
+        <ImageButton
+            android:id="@+id/button1"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="42dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/button1_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/button2"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/menu_events"
-        android:layout_width="335dp"
-        android:layout_height="148dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/far_events"
-        tools:itemCount="1" />
+        <!-- Button 2 -->
+        <ImageButton
+            android:id="@+id/button2"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="42dp"
+            android:src="@drawable/button1_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button1"
+            app:layout_constraintEnd_toStartOf="@id/button3"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <!-- Button 3 -->
+        <ImageButton
+            android:id="@+id/button3"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="42dp"
+            android:src="@drawable/button1_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button2"
+            app:layout_constraintEnd_toStartOf="@id/button4"/>
+
+        <!-- Button 4 -->
+        <ImageButton
+            android:id="@+id/button4"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="42dp"
+            android:src="@drawable/button1_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button3"
+            app:layout_constraintEnd_toStartOf="@id/button5"/>
+
+        <!-- Button 5 -->
+        <ImageButton
+            android:id="@+id/button5"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="42dp"
+            android:src="@drawable/button1_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/button4"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

@@ -6,26 +6,55 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="173dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo"
+        />
+
+    <TextView
+        android:id="@+id/aparts_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mont_semibold"
+        android:text="URFU.Aparts"
+        android:textSize="28sp"
+        android:textColor="#1E4391"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo"
+        />
+
     <Button
         android:id="@+id/auth_button"
         android:layout_width="260dp"
         android:layout_height="40dp"
-        android:layout_marginLeft="52dp"
-        android:layout_marginTop="340dp"
-        android:layout_marginRight="52dp"
+        android:layout_marginTop="48dp"
+        android:fontFamily="@font/mont_semibold"
         android:text="Войти"
         android:textColor="#FFFFFF"
+        android:textSize="19sp"
+        android:backgroundTint="#1E4391"
         app:layout_constraintCircleRadius="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/aparts_title" />
 
     <TextView
         android:id="@+id/question"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="4.5dp"
+        android:fontFamily="@font/mont_semibold"
         android:text="Нет аккаунта?"
+        android:textSize="13sp"
         app:layout_constraintEnd_toStartOf="@+id/reg_text"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/auth_button"
@@ -35,7 +64,10 @@
         android:id="@+id/reg_text"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="4.5dp"
+        android:textSize="13sp"
+        android:fontFamily="@font/mont_semibold"
         android:text="Зарегистрироваться"
         android:textColor="#1e4391"
         app:layout_constraintEnd_toEndOf="@+id/auth_button"

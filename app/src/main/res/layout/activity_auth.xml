@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,53 +7,133 @@
     android:orientation="vertical"
     tools:context=".AuthActivity">
 
-    <TextView
+    <ImageView
+        android:id="@+id/logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Авторизация"
-        android:layout_gravity="center"
-        android:layout_marginTop="170dp"
-        android:textSize="25sp"
-        android:textStyle="bold"
+        android:layout_marginTop="109dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo"
         />
+
+    <TextView
+        android:id="@+id/aparts_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/mont_semibold"
+        android:text="URFU.Aparts"
+        android:textColor="#1E4391"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+    <TextView
+        android:id="@+id/mail_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/mont_semibold"
+        android:text="Email"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="@+id/user_mail_auth"
+        app:layout_constraintTop_toBottomOf="@+id/aparts_title" />
 
     <EditText
         android:id="@+id/user_mail_auth"
-        android:layout_width="220dp"
-        android:layout_height="50dp"
+        android:layout_height="51dp"
+        android:layout_width="328dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:textColorHint="#6a6a6a"
-        android:layout_marginTop="20dp"
+        android:textSize="16sp"
         android:layout_gravity="center"
-        android:hint="Введите email" />
+        android:fontFamily="@font/mont_semibold"
+        android:hint="Email"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mail_text"/>
+
+    <TextView
+        android:id="@+id/pass_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/mont_semibold"
+        android:text="Пароль"
+        android:textSize="17sp"
+        app:layout_constraintStart_toStartOf="@+id/user_pass_auth"
+        app:layout_constraintTop_toBottomOf="@+id/user_mail_auth" />
 
     <EditText
         android:id="@+id/user_pass_auth"
-        android:layout_width="220dp"
-        android:layout_height="50dp"
+        android:layout_height="51dp"
+        android:layout_width="328dp"
         android:ems="10"
         android:inputType="textPassword"
         android:textColorHint="#6a6a6a"
-        android:layout_marginTop="20dp"
+        android:textSize="16sp"
         android:layout_gravity="center"
-        android:hint="Введите пароль" />
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/mont_semibold"
+        android:hint="Пароль"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pass_text"/>
 
     <Button
         android:id="@+id/button_auth"
-        android:layout_width="220dp"
+        android:layout_width="328dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/mont_semibold"
+        android:text="Войти"
+        android:textSize="19sp"
+        android:backgroundTint="#1E4391"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_pass_auth"/>
+
+    <TextView
+        android:id="@+id/reg_text"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"
-        android:text="Войти" />
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="109dp"
+        android:fontFamily="@font/mont_semibold"
+        android:text="Нет аккаунта?"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/link_to_reg"
+        app:layout_constraintTop_toBottomOf="@+id/button_auth"/>
 
     <TextView
         android:id="@+id/link_to_reg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="109dp"
+        android:fontFamily="@font/mont_semibold"
         android:text="Зарегистрироваться"
-        android:textSize="17sp" />
+        android:textSize="13sp"
+        android:textColor="#1E4391"
+        app:layout_constraintTop_toBottomOf="@+id/button_auth"
+        app:layout_constraintStart_toEndOf="@+id/reg_text"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

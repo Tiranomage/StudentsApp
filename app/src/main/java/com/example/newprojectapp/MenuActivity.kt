@@ -22,8 +22,6 @@ class MenuActivity : AppCompatActivity() {
         val events = arrayListOf<Event>()
 
         events.add(Event(1, "cats", "Событие", "Просто событие", "Самое обычное событие"))
-        events.add(Event(2, "cats", "Событие", "Просто событие", "Самое обычное событие"))
-        events.add(Event(3, "cats", "Событие", "Просто событие", "Самое обычное событие"))
 
         menuEvents.layoutManager = LinearLayoutManager(this)
         menuEvents.adapter = EventsAdapter(events, this)
