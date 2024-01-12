@@ -13,30 +13,31 @@ class MenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
 
-        val newsButton: Button = findViewById(R.id.news_button)
-        val colivingButton: ImageButton = findViewById(R.id.coliving_button)
-        val groupsButton: ImageButton = findViewById(R.id.groups_button)
-        val bunButton: ImageButton = findViewById(R.id.bun_button)
-        val menuEvents: RecyclerView = findViewById(R.id.menu_events)
+        val houseButton: ImageButton = findViewById(R.id.house_button)
+        val paidButton: ImageButton = findViewById(R.id.paid_button)
+        val menuButton: ImageButton = findViewById(R.id.menu_button)
+        val searchButton: ImageButton = findViewById(R.id.search_button)
+        val settingsButton: ImageButton = findViewById(R.id.settings_button)
+        // val menuEvents: RecyclerView = findViewById(R.id.menu_events)
 
         val events = arrayListOf<Event>()
 
         events.add(Event(1, "cats", "Событие", "Просто событие", "Самое обычное событие"))
 
-        menuEvents.layoutManager = LinearLayoutManager(this)
-        menuEvents.adapter = EventsAdapter(events, this)
+        /*menuEvents.layoutManager = LinearLayoutManager(this)
+        menuEvents.adapter = EventsAdapter(events, this)*/
 
-        groupsButton.setOnClickListener {
+        menuButton.setOnClickListener {
             val intent = Intent(this, GroupsActivity::class.java)
             startActivity(intent)
         }
 
-        colivingButton.setOnClickListener {
+        paidButton.setOnClickListener {
             val intent = Intent(this, ColivingAuthActivity::class.java)
             startActivity(intent)
         }
 
-        bunButton.setOnClickListener {
+        searchButton.setOnClickListener {
             val intent = Intent(this, BunActivity::class.java)
             startActivity(intent)
         }

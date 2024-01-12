@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="@color/white"
+    android:backgroundTint="#F6F9FF"
     tools:context=".MenuActivity">
 
     <!-- Application Name -->
+
     <TextView
         android:id="@+id/app_name"
         android:layout_width="match_parent"
@@ -21,6 +22,8 @@
         android:padding="16dp"/>
 
     <!-- Scrolling Text with Pictures -->
+
+    <!-- Bottom Menu with Buttons and Pictures -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -33,75 +36,192 @@
 
             <!-- Your scrolling text and pictures go here -->
 
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Что такое URFU.Aparts?"
+                android:textColor="#2D2D2D"
+                android:textSize="23sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/dormitory_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Общежития"
+                android:textColor="#2D2D2D"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/title" />
+
+            <TextView
+                android:id="@+id/dormitory_text"
+                android:layout_width="215dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/mont_regular"
+                android:text="Персональный гид в мире общежитий, предоставляющий полезную информацию, удобный поиск, запись к техническим специалистам и бронирование стиральных машин."
+                android:textColor="#323232"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dormitory_title" />
+
+            <ImageView
+                android:id="@+id/dormitory_img"
+                android:layout_width="104dp"
+                android:layout_height="104dp"
+                android:layout_marginStart="9dp"
+                android:src="@drawable/house"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/dormitory_text"
+                app:layout_constraintTop_toTopOf="@id/dormitory_title" />
+
+            <ImageView
+                android:id="@+id/house_img"
+                android:layout_width="102dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="35dp"
+                android:src="@drawable/paid_house"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dormitory_text" />
+
+            <TextView
+                android:id="@+id/house_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Платное жилье"
+                android:textColor="#2D2D2D"
+                android:textSize="19sp"
+                app:layout_constraintStart_toEndOf="@id/house_img"
+                app:layout_constraintTop_toBottomOf="@id/dormitory_text" />
+
+            <TextView
+                android:id="@+id/house_text"
+                android:layout_width="218dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/mont_regular"
+                android:text="Идеальный путеводитель в мире арендного жилья, предоставляющий возможность подачи заявок на услуги риелторов и удобный просмотр вариантов квартир."
+                android:textColor="#323232"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/house_img"
+                app:layout_constraintTop_toBottomOf="@id/house_title" />
+
+            <TextView
+                android:id="@+id/neighbour_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Поиск соседа"
+                android:textColor="#2D2D2D"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/house_text" />
+
+            <TextView
+                android:id="@+id/neighbour_text"
+                android:layout_width="218dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/mont_regular"
+                android:text="Личный помощник в поиске идеального соседа для совместного проживания, делая процесс поиска соседей простым и приятным."
+                android:textColor="#323232"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/neighbour_title" />
+
+            <ImageView
+                android:id="@+id/neighbour_img"
+                android:layout_width="104dp"
+                android:layout_height="88dp"
+                android:layout_marginStart="9dp"
+                android:src="@drawable/neighbours"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/neighbour_text"
+                app:layout_constraintTop_toTopOf="@id/neighbour_title" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </ScrollView>
 
-    <!-- Bottom Menu with Buttons and Pictures -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottom_menu"
         android:layout_width="match_parent"
         android:layout_height="92dp"
+        android:backgroundTint="#FFFFFF"
         android:layout_alignParentBottom="true">
 
         <!-- Button 1 -->
         <ImageButton
-            android:id="@+id/button1"
+            android:id="@+id/house_button"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:layout_marginStart="22dp"
             android:layout_marginTop="26dp"
             android:layout_marginBottom="42dp"
             android:backgroundTint="@color/white"
-            android:src="@drawable/button1_icon"
+            android:src="@drawable/house_icon"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/button2"/>
+            app:layout_constraintEnd_toStartOf="@id/paid_button"/>
 
         <!-- Button 2 -->
         <ImageButton
-            android:id="@+id/button2"
+            android:id="@+id/paid_button"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:backgroundTint="@color/white"
             android:layout_marginStart="42dp"
             android:layout_marginTop="26dp"
             android:layout_marginBottom="42dp"
-            android:src="@drawable/button1_icon"
+            android:src="@drawable/paid_icon"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@id/button1"
-            app:layout_constraintEnd_toStartOf="@id/button3"/>
+            app:layout_constraintStart_toEndOf="@id/house_button"
+            app:layout_constraintEnd_toStartOf="@id/menu_button"/>
 
         <!-- Button 3 -->
         <ImageButton
-            android:id="@+id/button3"
+            android:id="@+id/menu_button"
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/black"
             android:layout_marginStart="42dp"
             android:layout_marginTop="26dp"
             android:layout_marginBottom="42dp"
-            android:src="@drawable/button1_icon"
+            android:src="@drawable/menu_icon"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@id/button2"
-            app:layout_constraintEnd_toStartOf="@id/button4"/>
+            app:layout_constraintStart_toEndOf="@id/paid_button"
+            app:layout_constraintEnd_toStartOf="@id/search_button"/>
 
         <!-- Button 4 -->
         <ImageButton
-            android:id="@+id/button4"
+            android:id="@+id/search_button"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:backgroundTint="@color/white"
             android:layout_marginStart="42dp"
             android:layout_marginTop="26dp"
             android:layout_marginBottom="42dp"
-            android:src="@drawable/button1_icon"
+            android:src="@drawable/search_icon"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@id/button3"
-            app:layout_constraintEnd_toStartOf="@id/button5"/>
+            app:layout_constraintStart_toEndOf="@id/menu_button"
+            app:layout_constraintEnd_toStartOf="@id/settings_button"/>
 
         <!-- Button 5 -->
         <ImageButton
-            android:id="@+id/button5"
+            android:id="@+id/settings_button"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:backgroundTint="@color/white"
@@ -109,10 +229,10 @@
             android:layout_marginTop="26dp"
             android:layout_marginEnd="22dp"
             android:layout_marginBottom="42dp"
-            android:src="@drawable/button1_icon"
+            android:src="@drawable/settings_icon"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/button4"/>
+            app:layout_constraintStart_toEndOf="@id/search_button"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </RelativeLayout>
