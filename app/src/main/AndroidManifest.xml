@@ -17,7 +17,13 @@
         android:theme="@style/Theme.NewProjectApp"
         tools:targetApi="31">
         <activity
-            android:name=".BunActivity"
+            android:name=".FormActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".FormActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SearchActivity"
             android:exported="false" />
         <activity
             android:name=".ColivingRegActivity"

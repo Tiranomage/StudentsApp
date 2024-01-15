@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F9FF"
+    tools:context=".FormActivity">
+
+    <TextView
+        android:id="@+id/form_title"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#1E4391"
+        android:fontFamily="@font/mont_semibold"
+        android:gravity="bottom|center"
+        android:padding="16dp"
+        android:text="Заполнение анкеты"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#1E4391"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/backwards" />
+
+    <TextView
+        android:id="@+id/private_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Личная информация"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/mont_semibold"
+        android:textColor="#000000"
+        android:textSize="23sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/form_title"
+        />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Имя"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/mont_semibold"
+        android:textColor="#1A1A1A"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/private_info"/>
+
+    <EditText
+        android:id="@+id/edit_name"
+        android:layout_width="328dp"
+        android:layout_height="51dp"
+        android:ems="10"
+        android:textColorHint="#606060"
+        android:hint="Имя"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/mont_regular"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name"/>
+
+    <TextView
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Пол"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/mont_semibold"
+        android:textColor="#1A1A1A"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_name" />
+
+    <RadioGroup
+        android:id="@+id/gender_group"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gender"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/female_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Женский"
+            android:fontFamily="@font/mont_regular"
+            android:textColor="#323232"
+            android:textSize="16sp"/>
+
+        <RadioButton
+            android:id="@+id/male_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:text="Мужской"
+            android:fontFamily="@font/mont_regular"
+            android:textColor="#323232"
+            android:textSize="16sp"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/ref_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ссылка на соцсети"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/mont_semibold"
+        android:textColor="#1A1A1A"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gender_group" />
+
+    <EditText
+        android:id="@+id/edit_ref"
+        android:layout_width="328dp"
+        android:layout_height="51dp"
+        android:ems="10"
+        android:textColorHint="#606060"
+        android:hint="Например, Telegram"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/mont_regular"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ref_text"/>
+
+    <TextView
+        android:id="@+id/birth_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Дата рождения"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/mont_semibold"
+        android:textColor="#1A1A1A"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edit_ref" />
+
+    <EditText
+        android:id="@+id/user_birth_date"
+        android:layout_width="328dp"
+        android:layout_height="51dp"
+        android:ems="10"
+        android:inputType="date"
+        android:textColorHint="#606060"
+        android:hint="Дата рождения"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/mont_regular"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/birth_date"/>
+
+    <TextView
+        android:id="@+id/citizenship"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Гражданство РФ"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/mont_semibold"
+        android:textColor="#1A1A1A"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_birth_date" />
+
+    <RadioGroup
+        android:id="@+id/citizenship_group"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/citizenship"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/yes_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Да"
+            android:fontFamily="@font/mont_regular"
+            android:textColor="#323232"
+            android:textSize="16sp"/>
+
+        <RadioButton
+            android:id="@+id/no_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:text="Нет"
+            android:fontFamily="@font/mont_regular"
+            android:textColor="#323232"
+            android:textSize="16sp"/>
+    </RadioGroup>
+
+    <ImageButton
+        android:id="@+id/forward_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="66dp"
+        android:backgroundTint="#323232"
+        android:clickable="true"
+        android:rotationY="180"
+        android:background="@drawable/rounded_button"
+        app:srcCompat="@drawable/backwards"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

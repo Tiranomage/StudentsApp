@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#F6F9FF"
+    tools:context=".GroupsActivity">
+
+    <TextView
+        android:id="@+id/search_title"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:fontFamily="@font/mont_semibold"
+        android:text="Поиск соседа"
+        android:gravity="bottom"
+        android:textColor="@color/white"
+        android:background="#1E4391"
+        android:textSize="19sp"
+        android:padding="16dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_marginTop="100dp">
+
+        <ImageView
+            android:id="@+id/strange_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:srcCompat="@drawable/strange_img" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/mont_regular"
+            android:textSize="16sp"
+            android:text="Сервис по поиску сожителя на сайте
+– это надежный помощник в поиске идеального сожителя. Вот несколько преимуществ, которые вы получите, используя наш сервис:
+Экономия времени и денег
+Широкий выбор
+Фильтры и поиск
+Безопасность
+Легкий контакт
+"
+            app:layout_constraintTop_toBottomOf="@id/strange_img"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Button
+            android:id="@+id/form_button"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:fontFamily="@font/mont_regular"
+            android:textSize="13sp"
+            android:backgroundTint="#1E4391"
+            android:layout_marginTop="24dp"
+            android:text="Заполнить анкету"
+            app:layout_constraintTop_toBottomOf="@id/description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:backgroundTint="#FFFFFF"
+        android:layout_alignParentBottom="true">
+
+        <!-- Button 1 -->
+        <ImageButton
+            android:id="@+id/house_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="42dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/house_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/paid_button"/>
+
+        <!-- Button 2 -->
+        <ImageButton
+            android:id="@+id/paid_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="42dp"
+            android:src="@drawable/paid_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/house_button"
+            app:layout_constraintEnd_toStartOf="@id/menu_button"/>
+
+        <!-- Button 3 -->
+        <ImageButton
+            android:id="@+id/menu_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:backgroundTint="#1E4391"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:src="@drawable/menu_icon"
+            android:background="@drawable/rounded_button"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/paid_button"
+            app:layout_constraintEnd_toStartOf="@id/search_button"/>
+
+        <!-- Button 4 -->
+        <ImageButton
+            android:id="@+id/search_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="26dp"
+            android:backgroundTint="@color/white"
+            android:clickable="false"
+            android:src="@drawable/search_icon"
+            app:layout_constraintEnd_toStartOf="@id/settings_button"
+            app:layout_constraintStart_toEndOf="@id/menu_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Button 5 -->
+        <ImageButton
+            android:id="@+id/settings_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:backgroundTint="@color/white"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="42dp"
+            android:src="@drawable/settings_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/search_button"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
