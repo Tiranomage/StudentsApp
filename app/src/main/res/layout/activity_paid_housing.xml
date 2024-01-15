@@ -4,24 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:backgroundTint="#F6F9FF"
-    tools:context=".MenuActivity">
-
-    <!-- Application Name -->
+    android:background="#F6F9FF"
+    tools:context=".PaidHousingActivity">
 
     <TextView
-        android:id="@+id/app_name"
+        android:id="@+id/housing_title"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:fontFamily="@font/mont_semibold"
-        android:text="URFU.Aparts"
+        android:text="Платное жилье"
         android:gravity="bottom"
         android:textColor="@color/white"
         android:background="#1E4391"
         android:textSize="19sp"
         android:padding="16dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Scrolling Text with Pictures -->
 
@@ -29,10 +27,10 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_below="@id/app_name"
+        android:layout_below="@id/housing_title"
         app:layout_constraintBottom_toTopOf="@id/bottom_menu"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/app_name">
+        app:layout_constraintTop_toBottomOf="@id/housing_title">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -41,121 +39,124 @@
 
             <!-- Your scrolling text and pictures go here -->
 
-
             <TextView
-                android:id="@+id/title"
+                android:id="@+id/service_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="35dp"
                 android:fontFamily="@font/mont_semibold"
-                android:text="Что такое URFU.Aparts?"
-                android:textColor="#2D2D2D"
-                android:textSize="23sp"
+                android:text="О сервисе"
+                android:textColor="#1A1A1A"
+                android:textSize="19sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/dormitory_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:fontFamily="@font/mont_semibold"
-                android:text="Общежития"
-                android:textColor="#2D2D2D"
-                android:textSize="19sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/title" />
-
-            <TextView
-                android:id="@+id/dormitory_text"
-                android:layout_width="215dp"
+                android:id="@+id/service_text"
+                android:layout_width="328dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/mont_regular"
-                android:text="Персональный гид в мире общежитий, предоставляющий полезную информацию, удобный поиск, запись к техническим специалистам и бронирование стиральных машин."
-                android:textColor="#323232"
+                android:text="Проектный офис Союза студентов УрФУ «Платное жильё» — место, где помогают с поиском жилья.
+С 2011 года находим студентам комнаты, квартиры и частные общежития."
+                android:textColor="#1A1A1A"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/dormitory_title" />
-
-            <ImageView
-                android:id="@+id/dormitory_img"
-                android:layout_width="104dp"
-                android:layout_height="104dp"
-                android:layout_marginStart="9dp"
-                android:src="@drawable/house"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/dormitory_text"
-                app:layout_constraintTop_toTopOf="@id/dormitory_title" />
-
-            <ImageView
-                android:id="@+id/house_img"
-                android:layout_width="102dp"
-                android:layout_height="120dp"
-                android:layout_marginTop="35dp"
-                android:src="@drawable/paid_house_icon"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/dormitory_text" />
+                app:layout_constraintTop_toBottomOf="@id/service_title" />
 
             <TextView
-                android:id="@+id/house_title"
+                android:id="@+id/realtor_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="17dp"
                 android:fontFamily="@font/mont_semibold"
-                android:text="Платное жилье"
-                android:textColor="#2D2D2D"
+                android:text="Риэлторские услуги"
+                android:textColor="#1A1A1A"
                 android:textSize="19sp"
-                app:layout_constraintStart_toEndOf="@id/house_img"
-                app:layout_constraintTop_toBottomOf="@id/dormitory_text" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/service_text" />
 
-            <TextView
-                android:id="@+id/house_text"
-                android:layout_width="218dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+            <ImageButton
+                android:id="@+id/private_dorm_button"
+                android:layout_width="329dp"
+                android:layout_height="109dp"
                 android:layout_marginTop="12dp"
-                android:fontFamily="@font/mont_regular"
-                android:text="Идеальный путеводитель в мире арендного жилья, предоставляющий возможность подачи заявок на услуги риелторов и удобный просмотр вариантов квартир."
-                android:textColor="#323232"
-                android:textSize="16sp"
-                app:layout_constraintStart_toEndOf="@id/house_img"
-                app:layout_constraintTop_toBottomOf="@id/house_title" />
+                android:src="@drawable/private_dorm"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/realtor_title"/>
+
+            <ImageButton
+                android:id="@+id/paid_house_button"
+                android:layout_width="329dp"
+                android:layout_height="109dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/paid_house"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/private_dorm_button"/>
+
+            <ImageButton
+                android:id="@+id/rent_house_button"
+                android:layout_width="329dp"
+                android:layout_height="109dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/rent_house"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/paid_house_button"/>
+
+            <ImageButton
+                android:id="@+id/buy_house_button"
+                android:layout_width="329dp"
+                android:layout_height="109dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/buy_house"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rent_house_button"/>
 
             <TextView
-                android:id="@+id/neighbour_title"
+                android:id="@+id/free_service_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="17dp"
                 android:fontFamily="@font/mont_semibold"
-                android:text="Поиск соседа"
-                android:textColor="#2D2D2D"
+                android:text="Бесплатные консультации"
+                android:textColor="#1A1A1A"
                 android:textSize="19sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/house_text" />
+                app:layout_constraintTop_toBottomOf="@id/buy_house_button" />
 
             <TextView
-                android:id="@+id/neighbour_text"
-                android:layout_width="218dp"
+                android:id="@+id/free_service_text"
+                android:layout_width="330dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/mont_regular"
-                android:text="Личный помощник в поиске идеального соседа для совместного проживания, делая процесс поиска соседей простым и приятным."
-                android:textColor="#323232"
+                android:text="Необязательно обращаться к риелтору. Можно бесплатно проконсультироваться в Платное Жильё - написать в ЛС группы или руководителю."
+                android:textColor="#1A1A1A"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/neighbour_title" />
+                app:layout_constraintTop_toBottomOf="@id/free_service_title" />
+
+            <TextView
+                android:id="@+id/free_service_text2"
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/mont_regular"
+                android:text="Приходи на консультацию с вариантами съемного жилья:"
+                android:textColor="#1A1A1A"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/free_service_text" />
 
             <ImageView
-                android:id="@+id/neighbour_img"
-                android:layout_width="104dp"
-                android:layout_height="88dp"
-                android:layout_marginStart="9dp"
-                android:src="@drawable/neighbours"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/neighbour_text"
-                app:layout_constraintTop_toTopOf="@id/neighbour_title" />
+                android:id="@+id/imageView"
+                android:layout_width="327dp"
+                android:layout_height="310dp"
+                android:layout_marginTop="8dp"
+                tools:src="@drawable/tables"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/free_service_text2"/>
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -192,6 +193,7 @@
             android:layout_marginStart="42dp"
             android:layout_marginTop="26dp"
             android:layout_marginBottom="42dp"
+            android:clickable="false"
             android:backgroundTint="@color/white"
             android:src="@drawable/paid_icon"
             app:layout_constraintEnd_toStartOf="@id/menu_button"

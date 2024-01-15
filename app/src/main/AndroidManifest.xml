@@ -17,6 +17,9 @@
         android:theme="@style/Theme.NewProjectApp"
         tools:targetApi="31">
         <activity
+            android:name=".PaidHouseActivity"
+            android:exported="false" />
+        <activity
             android:name=".SettingsActivity"
             android:exported="false" />
         <activity
@@ -44,7 +47,7 @@
             android:name=".ColivingRegActivity"
             android:exported="false" />
         <activity
-            android:name=".ColivingAuthActivity"
+            android:name=".PaidHousingActivity"
             android:exported="false" />
         <activity
             android:name=".RegActivity"

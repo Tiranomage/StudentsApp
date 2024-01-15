@@ -30,7 +30,7 @@ class MenuActivity : AppCompatActivity() {
         }
 
         paidButton.setOnClickListener {
-            val intent = Intent(this, ColivingAuthActivity::class.java)
+            val intent = Intent(this, PaidHousingActivity::class.java)
             startActivity(intent)
         }
 
