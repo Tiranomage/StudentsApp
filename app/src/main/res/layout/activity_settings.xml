@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F9FF"
+    tools:context=".SettingsActivity">
+
+    <TextView
+        android:id="@+id/settings_title"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:fontFamily="@font/mont_semibold"
+        android:text="Настройки"
+        android:gravity="bottom"
+        android:textColor="@color/white"
+        android:background="#1E4391"
+        android:textSize="19sp"
+        android:padding="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/settings_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mont_semibold"
+        android:text="Brandonelouis@gmail.com"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:textSize="16sp"
+        android:textColor="#323232"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/settings_title"/>
+
+    <Button
+        android:id="@+id/leave_button"
+        android:layout_width="328dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/mont_regular"
+        android:text="Выйти из приложения"
+        android:textSize="13sp"
+        android:backgroundTint="#1E4391"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/settings_mail"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Button 1 -->
+        <ImageButton
+            android:id="@+id/house_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="42dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/house_icon"
+            app:layout_constraintEnd_toStartOf="@id/paid_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Button 2 -->
+        <ImageButton
+            android:id="@+id/paid_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="42dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/paid_icon"
+            app:layout_constraintEnd_toStartOf="@id/menu_button"
+            app:layout_constraintStart_toEndOf="@id/house_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Button 3 -->
+        <ImageButton
+            android:id="@+id/menu_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="#1E4391"
+            android:src="@drawable/menu_icon"
+            android:background="@drawable/rounded_button"
+            app:layout_constraintEnd_toStartOf="@id/search_button"
+            app:layout_constraintStart_toEndOf="@id/paid_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Button 4 -->
+        <ImageButton
+            android:id="@+id/search_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="42dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/search_icon"
+            app:layout_constraintEnd_toStartOf="@id/settings_button"
+            app:layout_constraintStart_toEndOf="@id/menu_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Button 5 -->
+        <ImageButton
+            android:id="@+id/settings_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="22dp"
+            android:backgroundTint="@color/white"
+            android:clickable="false"
+            android:src="@drawable/settings_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/search_button"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

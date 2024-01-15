@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F6F9FF"
-    tools:context=".FormActivity2">
+    tools:context=".FormActivity6">
 
     <TextView
         android:id="@+id/form_title"
@@ -34,10 +34,10 @@
         tools:srcCompat="@drawable/backwards" />
 
     <TextView
-        android:id="@+id/self_desc"
+        android:id="@+id/neighbour_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Характеристика себя"
+        android:text="Характеристика соседа"
         android:layout_marginTop="24dp"
         android:layout_marginStart="16dp"
         android:fontFamily="@font/mont_semibold"
@@ -48,26 +48,150 @@
         />
 
     <TextView
-        android:id="@+id/chronotype"
+        android:id="@+id/period"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ваш хронотип"
+        android:text="Период проживания"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
         android:fontFamily="@font/mont_semibold"
         android:textColor="#1A1A1A"
         android:textSize="19sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/self_desc"/>
+        app:layout_constraintTop_toBottomOf="@id/neighbour_desc"/>
+
+    <EditText
+        android:id="@+id/from_live"
+        android:layout_width="95dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/mont_regular"
+        android:inputType="date"
+        android:textColor="#606060"
+        android:textSize="16sp"
+        android:ems="10"
+        android:hint="С"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/period"/>
+
+    <TextView
+        android:id="@+id/dash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/mont_semibold"
+        android:layout_marginTop="26.5dp"
+        android:layout_marginStart="12dp"
+        android:textSize="10sp"
+        android:text="—"
+        app:layout_constraintStart_toEndOf="@id/from_live"
+        app:layout_constraintTop_toBottomOf="@id/period"/>
+
+    <EditText
+        android:id="@+id/to_live"
+        android:layout_width="95dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="32dp"
+        android:fontFamily="@font/mont_regular"
+        android:inputType="date"
+        android:textColor="#606060"
+        android:textSize="16sp"
+        android:ems="10"
+        android:hint="По"
+        app:layout_constraintStart_toEndOf="@id/from_live"
+        app:layout_constraintTop_toBottomOf="@id/period"/>
+
+    <TextView
+        android:id="@+id/wish_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Пол"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/mont_semibold"
+        android:textColor="#1A1A1A"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/from_live" />
 
     <RadioGroup
-        android:id="@+id/chronotype_group"
+        android:id="@+id/wish_gender_group"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wish_gender"
+        android:orientation="horizontal">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <RadioButton
+                    android:id="@+id/female_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Женский"
+                    android:textColor="#323232"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/male_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="52dp"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Мужской"
+                    android:textColor="#323232"
+                    android:textSize="16sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="4dp">
+
+                <RadioButton
+                    android:id="@+id/free_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:textColor="#323232"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Любой" />
+            </TableRow>
+        </TableLayout>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/wish_chronotype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Желаемый хронотип"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/mont_semibold"
+        android:textColor="#1A1A1A"
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wish_gender_group"/>
+
+    <RadioGroup
+        android:id="@+id/wish_chronotype_group"
         android:layout_width="wrap_content"
         android:layout_height="24dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/chronotype"
+        app:layout_constraintTop_toBottomOf="@id/wish_chronotype"
         android:orientation="horizontal">
 
         <RadioButton
@@ -95,13 +219,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Отношение к курению"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="4dp"
         android:layout_marginStart="16dp"
         android:fontFamily="@font/mont_semibold"
         android:textColor="#1A1A1A"
         android:textSize="19sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/chronotype_group" />
+        app:layout_constraintTop_toBottomOf="@id/wish_chronotype_group" />
 
     <RadioGroup
         android:id="@+id/smoking_group"
@@ -167,7 +291,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Отношение к алкоголю"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="4dp"
         android:layout_marginStart="16dp"
         android:fontFamily="@font/mont_semibold"
         android:textColor="#1A1A1A"
@@ -238,42 +362,14 @@
         android:id="@+id/animal_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Есть животные?"
-        android:layout_marginTop="12dp"
+        android:text="Наличие питомца"
+        android:layout_marginTop="4dp"
         android:layout_marginStart="16dp"
         android:fontFamily="@font/mont_semibold"
         android:textColor="#1A1A1A"
         android:textSize="19sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/alcohol_group" />
-
-    <EditText
-        android:id="@+id/user_birth_date"
-        android:layout_width="328dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:textColorHint="#606060"
-        android:hint="Напишите о ваших увлечениях и других подробностях, которые могли бы быть важны вашему соседу"
-        android:layout_marginTop="4dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:fontFamily="@font/mont_regular"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/citizenship"/>
-
-    <TextView
-        android:id="@+id/citizenship"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="О себе"
-        android:layout_marginTop="12dp"
-        android:layout_marginStart="16dp"
-        android:fontFamily="@font/mont_semibold"
-        android:textColor="#1A1A1A"
-        android:textSize="19sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/animal_group" />
 
     <RadioGroup
         android:id="@+id/animal_group"
@@ -286,20 +382,20 @@
         android:orientation="horizontal">
 
         <RadioButton
-            android:id="@+id/yes_button"
+            android:id="@+id/con_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Да"
+            android:text="Против"
             android:fontFamily="@font/mont_regular"
             android:textColor="#323232"
             android:textSize="16sp"/>
 
         <RadioButton
-            android:id="@+id/no_button"
+            android:id="@+id/aye_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="52dp"
-            android:text="Нет"
+            android:text="Не против"
             android:fontFamily="@font/mont_regular"
             android:textColor="#323232"
             android:textSize="16sp"/>

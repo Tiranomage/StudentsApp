@@ -3,26 +3,19 @@ package com.example.newprojectapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageButton
 
-class MenuActivity : AppCompatActivity() {
+class SettingsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_menu)
+        setContentView(R.layout.activity_settings)
 
         val houseButton: ImageButton = findViewById(R.id.house_button)
         val paidButton: ImageButton = findViewById(R.id.paid_button)
         val menuButton: ImageButton = findViewById(R.id.menu_button)
         val searchButton: ImageButton = findViewById(R.id.search_button)
-        val settingsButton: ImageButton = findViewById(R.id.settings_button)
-        // val menuEvents: RecyclerView = findViewById(R.id.menu_events)
-
-        /*val events = arrayListOf<Event>()
-
-        events.add(Event(1, "cats", "Событие", "Просто событие", "Самое обычное событие"))*/
-
-        /*menuEvents.layoutManager = LinearLayoutManager(this)
-        menuEvents.adapter = EventsAdapter(events, this)*/
+        val leaveButton: Button = findViewById(R.id.leave_button)
 
         menuButton.setOnClickListener {
             val intent = Intent(this, GroupsActivity::class.java)
@@ -39,8 +32,8 @@ class MenuActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        settingsButton.setOnClickListener {
-            val intent = Intent(this, SettingsActivity::class.java)
+        leaveButton.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }

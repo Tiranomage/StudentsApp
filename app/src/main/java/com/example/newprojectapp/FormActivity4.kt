@@ -5,10 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
 
-class FormActivity2 : AppCompatActivity() {
+class FormActivity4 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_form2)
+        setContentView(R.layout.activity_form4)
 
         val backButton: ImageButton = findViewById(R.id.back_button)
         val backwardButton: ImageButton = findViewById(R.id.backward_button)
@@ -16,7 +16,7 @@ class FormActivity2 : AppCompatActivity() {
 
 
         forwardButton.setOnClickListener {
-            val intent = Intent(this, FormActivity3::class.java)
+            val intent = Intent(this, FormActivity5::class.java)
             startActivity(intent)
         }
 
@@ -26,7 +26,7 @@ class FormActivity2 : AppCompatActivity() {
         }
 
         backwardButton.setOnClickListener {
-            val intent = Intent(this, FormActivity::class.java)
+            val intent = Intent(this, FormActivity3::class.java)
             startActivity(intent)
         }
     }

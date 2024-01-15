@@ -17,6 +17,21 @@
         android:theme="@style/Theme.NewProjectApp"
         tools:targetApi="31">
         <activity
+            android:name=".SettingsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FormActivity6"
+            android:exported="false" />
+        <activity
+            android:name=".FormActivity4"
+            android:exported="false" />
+        <activity
+            android:name=".FormActivity5"
+            android:exported="false" />
+        <activity
+            android:name=".FormActivity3"
+            android:exported="false" />
+        <activity
             android:name=".FormActivity2"
             android:exported="false" />
         <activity
