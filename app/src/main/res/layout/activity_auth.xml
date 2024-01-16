@@ -52,11 +52,14 @@
         android:textColorHint="#6a6a6a"
         android:textSize="16sp"
         android:layout_gravity="center"
-        android:fontFamily="@font/mont_semibold"
+        android:fontFamily="@font/mont_regular"
         android:hint="Email"
         android:layout_marginTop="4dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="@drawable/edit_text_style"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mail_text"/>
@@ -85,7 +88,10 @@
         android:layout_marginTop="4dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:fontFamily="@font/mont_semibold"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="@drawable/edit_text_style"
+        android:fontFamily="@font/mont_regular"
         android:hint="Пароль"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -105,7 +111,7 @@
         android:backgroundTint="#1E4391"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/user_pass_auth"/>
+        app:layout_constraintTop_toBottomOf="@id/user_pass_auth"/>
 
     <TextView
         android:id="@+id/reg_text"

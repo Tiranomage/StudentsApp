@@ -15,7 +15,7 @@ class FormActivity : AppCompatActivity() {
         val userName: EditText = findViewById(R.id.edit_name)
         val userSocial: EditText = findViewById(R.id.edit_ref)
         val userDate: EditText = findViewById(R.id.user_birth_date)
-        val backButton: ImageButton = findViewById(R.id.back_button)
+        val backButton: ImageButton = findViewById(R.id.back_button_form)
         val forwardButton: ImageButton = findViewById(R.id.forward_button)
 
 
