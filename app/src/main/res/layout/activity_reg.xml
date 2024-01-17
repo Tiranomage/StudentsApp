@@ -47,7 +47,7 @@
     <EditText
         android:id="@+id/user_mail"
         android:layout_height="51dp"
-        android:layout_width="328dp"
+        android:layout_width="match_parent"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:textColorHint="#6a6a6a"
@@ -80,7 +80,7 @@
     <EditText
         android:id="@+id/user_pass"
         android:layout_height="51dp"
-        android:layout_width="328dp"
+        android:layout_width="match_parent"
         android:ems="10"
         android:inputType="textPassword"
         android:textColorHint="#6a6a6a"
@@ -100,7 +100,7 @@
 
     <Button
         android:id="@+id/button_reg"
-        android:layout_width="328dp"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_gravity="center"
         android:layout_marginTop="16dp"

@@ -34,9 +34,11 @@
 
     <Button
         android:id="@+id/auth_button"
-        android:layout_width="260dp"
+        android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginTop="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:fontFamily="@font/mont_semibold"
         android:text="Войти"
         android:textColor="#FFFFFF"
@@ -52,13 +54,12 @@
         android:layout_width="wrap_content"
         android:layout_height="20dp"
         android:layout_marginTop="15dp"
-        android:layout_marginStart="4.5dp"
+        android:layout_marginStart="16dp"
         android:fontFamily="@font/mont_semibold"
         android:text="Нет аккаунта?"
         android:textSize="13sp"
         app:layout_constraintEnd_toStartOf="@+id/reg_text"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/auth_button"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/auth_button" />
 
     <TextView
@@ -66,11 +67,12 @@
         android:layout_width="wrap_content"
         android:layout_height="20dp"
         android:layout_marginTop="15dp"
-        android:layout_marginEnd="4.5dp"
-        android:textSize="13sp"
+        android:layout_marginEnd="16dp"
         android:fontFamily="@font/mont_semibold"
         android:text="Зарегистрироваться"
         android:textColor="#1e4391"
-        app:layout_constraintEnd_toEndOf="@+id/auth_button"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/question"
         app:layout_constraintTop_toBottomOf="@+id/auth_button" />
 </androidx.constraintlayout.widget.ConstraintLayout>

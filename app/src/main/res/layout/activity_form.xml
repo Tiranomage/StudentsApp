@@ -62,20 +62,21 @@
 
     <EditText
         android:id="@+id/edit_name"
-        android:layout_width="328dp"
+        android:layout_width="match_parent"
         android:layout_height="51dp"
-        android:ems="10"
-        android:textColorHint="#606060"
-        android:hint="Имя"
         android:layout_marginTop="4dp"
-        android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:fontFamily="@font/mont_regular"
-        android:paddingStart="16dp"
+        android:layout_marginStart="16dp"
         android:background="@drawable/edit_text_style"
+        android:ems="10"
+        android:fontFamily="@font/mont_regular"
+        android:hint="Имя"
+        android:paddingStart="16dp"
+        android:textColorHint="#606060"
         android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/name"/>
+        app:layout_constraintTop_toBottomOf="@id/name" />
 
     <TextView
         android:id="@+id/gender"
@@ -135,21 +136,22 @@
 
     <EditText
         android:id="@+id/edit_ref"
-        android:layout_width="328dp"
+        android:layout_width="match_parent"
         android:layout_height="51dp"
-        android:ems="10"
-        android:textColorHint="#606060"
-        android:hint="Например, Telegram"
         android:layout_marginTop="4dp"
-        android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/edit_text_style"
+        android:ems="10"
         android:fontFamily="@font/mont_regular"
+        android:hint="Например, Telegram"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
-        android:background="@drawable/edit_text_style"
+        android:textColorHint="#606060"
         android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ref_text"/>
+        app:layout_constraintTop_toBottomOf="@id/ref_text" />
 
     <TextView
         android:id="@+id/birth_date"
@@ -166,22 +168,23 @@
 
     <EditText
         android:id="@+id/user_birth_date"
-        android:layout_width="328dp"
+        android:layout_width="match_parent"
         android:layout_height="51dp"
-        android:ems="10"
-        android:inputType="date"
-        android:textColorHint="#606060"
-        android:hint="Дата рождения"
         android:layout_marginTop="4dp"
-        android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/edit_text_style"
+        android:ems="10"
         android:fontFamily="@font/mont_regular"
+        android:hint="Дата рождения"
+        android:inputType="date"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
-        android:background="@drawable/edit_text_style"
+        android:textColorHint="#606060"
         android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/birth_date"/>
+        app:layout_constraintTop_toBottomOf="@id/birth_date" />
 
     <TextView
         android:id="@+id/citizenship"

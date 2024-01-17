@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F6F9FF"
-    tools:context=".RequestActivity">
+    tools:context=".RentRequestActivity">
 
     <TextView
         android:id="@+id/request_title"
@@ -23,7 +23,7 @@
         />
 
     <ImageButton
-        android:id="@+id/back_button_request"
+        android:id="@+id/back_button_rent_request"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginStart="16dp"
@@ -49,7 +49,7 @@
             android:padding="16dp">
 
             <TextView
-                android:id="@+id/name"
+                android:id="@+id/rent_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Имя"
@@ -61,7 +61,7 @@
                 app:layout_constraintTop_toTopOf="parent"/>
 
             <EditText
-                android:id="@+id/edit_name"
+                android:id="@+id/edit_rent_name"
                 android:layout_width="match_parent"
                 android:layout_height="37dp"
                 android:layout_marginTop="4dp"
@@ -75,10 +75,10 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/name" />
+                app:layout_constraintTop_toBottomOf="@id/rent_name" />
 
             <TextView
-                android:id="@+id/surname"
+                android:id="@+id/rent_surname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Фамилия"
@@ -87,10 +87,10 @@
                 android:textColor="#1A1A1A"
                 android:textSize="19sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/edit_name"/>
+                app:layout_constraintTop_toBottomOf="@id/edit_rent_name"/>
 
             <EditText
-                android:id="@+id/edit_surname"
+                android:id="@+id/edit_rent_surname"
                 android:layout_width="match_parent"
                 android:layout_height="37dp"
                 android:layout_marginTop="4dp"
@@ -104,10 +104,10 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/surname" />
+                app:layout_constraintTop_toBottomOf="@id/rent_surname" />
 
             <TextView
-                android:id="@+id/phone"
+                android:id="@+id/rent_phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Номер телефона"
@@ -116,10 +116,10 @@
                 android:textColor="#1A1A1A"
                 android:textSize="19sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/edit_surname"/>
+                app:layout_constraintTop_toBottomOf="@id/edit_rent_surname"/>
 
             <EditText
-                android:id="@+id/edit_phone"
+                android:id="@+id/edit_rent_phone"
                 android:layout_width="match_parent"
                 android:layout_height="37dp"
                 android:layout_marginTop="4dp"
@@ -134,10 +134,39 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/phone" />
+                app:layout_constraintTop_toBottomOf="@id/rent_phone" />
 
             <TextView
-                android:id="@+id/living_type"
+                android:id="@+id/property_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Право на собственность"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/mont_semibold"
+                android:textColor="#1A1A1A"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edit_rent_phone"/>
+
+            <EditText
+                android:id="@+id/edit_property_right"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edit_text_style"
+                android:ems="10"
+                android:fontFamily="@font/mont_regular"
+                android:hint="Например, я собственник"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColorHint="#606060"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/property_right" />
+
+            <TextView
+                android:id="@+id/rent_living_type"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Тип жилья"
@@ -146,143 +175,114 @@
                 android:textColor="#1A1A1A"
                 android:textSize="19sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/edit_phone"/>
+                app:layout_constraintTop_toBottomOf="@id/edit_property_right"/>
 
             <EditText
-                android:id="@+id/edit_living_type"
+                android:id="@+id/edit_rent_living_type"
                 android:layout_width="match_parent"
                 android:layout_height="37dp"
                 android:layout_marginTop="4dp"
                 android:background="@drawable/edit_text_style"
                 android:ems="10"
                 android:fontFamily="@font/mont_regular"
-                android:hint="Например, 2-к квартира"
+                android:hint="Например, комната"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 android:textColorHint="#606060"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/living_type" />
+                app:layout_constraintTop_toBottomOf="@id/rent_living_type" />
 
             <TextView
-                android:id="@+id/budget1"
+                android:id="@+id/rent_address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Бюджет"
+                android:text="Район и адрес жилья"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/mont_semibold"
                 android:textColor="#1A1A1A"
                 android:textSize="19sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/edit_living_type"/>
+                app:layout_constraintTop_toBottomOf="@id/edit_rent_living_type"/>
 
             <EditText
-                android:id="@+id/edit_budget1"
+                android:id="@+id/edit_rent_address"
                 android:layout_width="match_parent"
                 android:layout_height="37dp"
                 android:layout_marginTop="4dp"
                 android:background="@drawable/edit_text_style"
                 android:ems="10"
                 android:fontFamily="@font/mont_regular"
-                android:hint="Например, 21 000₽ + к.у."
+                android:hint="Район и адрес жилья"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 android:textColorHint="#606060"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/budget1" />
+                app:layout_constraintTop_toBottomOf="@id/rent_address" />
 
             <TextView
-                android:id="@+id/edu_place"
+                android:id="@+id/rent_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Место учебы"
+                android:text="Стоимость"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/mont_semibold"
                 android:textColor="#1A1A1A"
                 android:textSize="19sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/edit_budget1"/>
+                app:layout_constraintTop_toBottomOf="@id/edit_rent_address"/>
 
             <EditText
-                android:id="@+id/edit_edu_place"
+                android:id="@+id/edit_rent_price"
                 android:layout_width="match_parent"
                 android:layout_height="37dp"
                 android:layout_marginTop="4dp"
                 android:background="@drawable/edit_text_style"
                 android:ems="10"
                 android:fontFamily="@font/mont_regular"
-                android:hint="Например, УГИ"
+                android:hint="Стоимость"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 android:textColorHint="#606060"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/edu_place" />
+                app:layout_constraintTop_toBottomOf="@id/rent_price" />
 
             <TextView
-                android:id="@+id/what_date"
+                android:id="@+id/rent_info"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="К какому сроку нужно жилье?"
+                android:text="Дополнительная информация"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/mont_semibold"
                 android:textColor="#1A1A1A"
                 android:textSize="19sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/edit_edu_place"/>
+                app:layout_constraintTop_toBottomOf="@id/edit_rent_price"/>
 
             <EditText
-                android:id="@+id/edit_what_date"
+                android:id="@+id/edit_rent_info"
                 android:layout_width="match_parent"
                 android:layout_height="37dp"
                 android:layout_marginTop="4dp"
                 android:background="@drawable/edit_text_style"
                 android:ems="10"
                 android:fontFamily="@font/mont_regular"
-                android:hint="Например, к 1 августа"
+                android:hint="Дополнительная информация"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 android:textColorHint="#606060"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/what_date" />
-
-            <TextView
-                android:id="@+id/how_long"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="На какой срок нужно жилье?"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/mont_semibold"
-                android:textColor="#1A1A1A"
-                android:textSize="19sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/edit_what_date"/>
-
-            <EditText
-                android:id="@+id/edit_how_long"
-                android:layout_width="match_parent"
-                android:layout_height="37dp"
-                android:layout_marginTop="4dp"
-                android:background="@drawable/edit_text_style"
-                android:ems="10"
-                android:fontFamily="@font/mont_regular"
-                android:hint="Например, на учебный год"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:textColorHint="#606060"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/how_long" />
+                app:layout_constraintTop_toBottomOf="@id/rent_info" />
 
             <Button
-                android:id="@+id/button_request"
+                android:id="@+id/button_rent_request"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
@@ -293,7 +293,7 @@
                 android:textSize="13sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/edit_how_long" />
+                app:layout_constraintTop_toBottomOf="@id/edit_rent_info" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

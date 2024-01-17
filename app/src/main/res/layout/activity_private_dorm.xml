@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F6F9FF"
-    tools:context=".RequestActivity">
+    tools:context=".PrivateDormActivity">
 
     <TextView
-        android:id="@+id/request_title"
+        android:id="@+id/private_dorm_title"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="#1E4391"
@@ -23,7 +23,7 @@
         />
 
     <ImageButton
-        android:id="@+id/back_button_request"
+        android:id="@+id/private_dorm_back_button"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginStart="16dp"
@@ -41,7 +41,7 @@
         app:layout_constraintBottom_toTopOf="@id/bottom_menu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/request_title" >
+        app:layout_constraintTop_toBottomOf="@id/private_dorm_title" >
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -49,7 +49,7 @@
             android:padding="16dp">
 
             <TextView
-                android:id="@+id/name"
+                android:id="@+id/private_dorm_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Имя"
@@ -61,7 +61,7 @@
                 app:layout_constraintTop_toTopOf="parent"/>
 
             <EditText
-                android:id="@+id/edit_name"
+                android:id="@+id/edit_private_dorm_name"
                 android:layout_width="match_parent"
                 android:layout_height="37dp"
                 android:layout_marginTop="4dp"
@@ -75,10 +75,10 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/name" />
+                app:layout_constraintTop_toBottomOf="@id/private_dorm_name" />
 
             <TextView
-                android:id="@+id/surname"
+                android:id="@+id/private_dorm_surname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Фамилия"
@@ -87,10 +87,10 @@
                 android:textColor="#1A1A1A"
                 android:textSize="19sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/edit_name"/>
+                app:layout_constraintTop_toBottomOf="@id/edit_private_dorm_name"/>
 
             <EditText
-                android:id="@+id/edit_surname"
+                android:id="@+id/edit_private_dorm_surname"
                 android:layout_width="match_parent"
                 android:layout_height="37dp"
                 android:layout_marginTop="4dp"
@@ -104,10 +104,10 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/surname" />
+                app:layout_constraintTop_toBottomOf="@id/private_dorm_surname" />
 
             <TextView
-                android:id="@+id/phone"
+                android:id="@+id/private_dorm_phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Номер телефона"
@@ -116,10 +116,10 @@
                 android:textColor="#1A1A1A"
                 android:textSize="19sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/edit_surname"/>
+                app:layout_constraintTop_toBottomOf="@id/edit_private_dorm_surname"/>
 
             <EditText
-                android:id="@+id/edit_phone"
+                android:id="@+id/edit_private_dorm_phone"
                 android:layout_width="match_parent"
                 android:layout_height="37dp"
                 android:layout_marginTop="4dp"
@@ -134,68 +134,39 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/phone" />
+                app:layout_constraintTop_toBottomOf="@id/private_dorm_phone" />
 
             <TextView
-                android:id="@+id/living_type"
+                android:id="@+id/private_dorm_course"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Тип жилья"
+                android:text="Курс обучения"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/mont_semibold"
                 android:textColor="#1A1A1A"
                 android:textSize="19sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/edit_phone"/>
+                app:layout_constraintTop_toBottomOf="@id/edit_private_dorm_edu_place"/>
 
             <EditText
-                android:id="@+id/edit_living_type"
+                android:id="@+id/edit_private_dorm_course"
                 android:layout_width="match_parent"
                 android:layout_height="37dp"
                 android:layout_marginTop="4dp"
                 android:background="@drawable/edit_text_style"
                 android:ems="10"
                 android:fontFamily="@font/mont_regular"
-                android:hint="Например, 2-к квартира"
+                android:hint="Например, 2 курс"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 android:textColorHint="#606060"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/living_type" />
+                app:layout_constraintTop_toBottomOf="@id/private_dorm_course" />
 
             <TextView
-                android:id="@+id/budget1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Бюджет"
-                android:layout_marginTop="12dp"
-                android:fontFamily="@font/mont_semibold"
-                android:textColor="#1A1A1A"
-                android:textSize="19sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/edit_living_type"/>
-
-            <EditText
-                android:id="@+id/edit_budget1"
-                android:layout_width="match_parent"
-                android:layout_height="37dp"
-                android:layout_marginTop="4dp"
-                android:background="@drawable/edit_text_style"
-                android:ems="10"
-                android:fontFamily="@font/mont_regular"
-                android:hint="Например, 21 000₽ + к.у."
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:textColorHint="#606060"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/budget1" />
-
-            <TextView
-                android:id="@+id/edu_place"
+                android:id="@+id/private_dorm_edu_place"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Место учебы"
@@ -204,10 +175,10 @@
                 android:textColor="#1A1A1A"
                 android:textSize="19sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/edit_budget1"/>
+                app:layout_constraintTop_toBottomOf="@id/edit_private_dorm_phone"/>
 
             <EditText
-                android:id="@+id/edit_edu_place"
+                android:id="@+id/edit_private_dorm_edu_place"
                 android:layout_width="match_parent"
                 android:layout_height="37dp"
                 android:layout_marginTop="4dp"
@@ -221,68 +192,158 @@
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/edu_place" />
+                app:layout_constraintTop_toBottomOf="@id/private_dorm_edu_place" />
 
             <TextView
-                android:id="@+id/what_date"
+                android:id="@+id/private_dorm_place"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="К какому сроку нужно жилье?"
+                android:text="В какое общежитие планируете заселиться?"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/mont_semibold"
                 android:textColor="#1A1A1A"
                 android:textSize="19sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/edit_edu_place"/>
+                app:layout_constraintTop_toBottomOf="@id/edit_private_dorm_course"/>
+
+            <RadioButton
+                android:id="@+id/proninButton"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="16dp"
+                android:textColor="#323232"
+                android:textSize="16sp"
+                android:fontFamily="@font/mont_regular"
+                android:text="Прониной, 25"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/private_dorm_place"
+                />
+
+            <RadioButton
+                android:id="@+id/automaticButton"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="16dp"
+                android:textColor="#323232"
+                android:textSize="16sp"
+                android:fontFamily="@font/mont_regular"
+                android:text="Переулок Автоматики, 3/2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/proninButton"/>
+
+            <RadioButton
+                android:id="@+id/redArmyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="16dp"
+                android:textColor="#323232"
+                android:textSize="16sp"
+                android:fontFamily="@font/mont_regular"
+                android:text="Красноармейская, 1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/automaticButton"/>
+
+            <RadioButton
+                android:id="@+id/korolenkoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="16dp"
+                android:textColor="#323232"
+                android:textSize="16sp"
+                android:fontFamily="@font/mont_regular"
+                android:text="Короленко, 5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/redArmyButton"/>
+
+            <RadioButton
+                android:id="@+id/marshallButton"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="16dp"
+                android:textColor="#323232"
+                android:textSize="16sp"
+                android:fontFamily="@font/mont_regular"
+                android:text="Маршала Жукова, 3"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/korolenkoButton"/>
+
+            <TextView
+                android:id="@+id/private_dorm_neighbour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="С кем хотите жить? (ФИО, ссылка Вконтакте)"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/mont_semibold"
+                android:textColor="#1A1A1A"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/marshallButton"/>
 
             <EditText
-                android:id="@+id/edit_what_date"
+                android:id="@+id/edit_private_dorm_neighbour"
                 android:layout_width="match_parent"
                 android:layout_height="37dp"
                 android:layout_marginTop="4dp"
                 android:background="@drawable/edit_text_style"
                 android:ems="10"
                 android:fontFamily="@font/mont_regular"
-                android:hint="Например, к 1 августа"
+                android:hint="С кем хотите жить?"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 android:textColorHint="#606060"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/what_date" />
+                app:layout_constraintTop_toBottomOf="@id/private_dorm_neighbour" />
 
             <TextView
-                android:id="@+id/how_long"
+                android:id="@+id/private_dorm_applicant"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="На какой срок нужно жилье?"
+                android:text="Претендуете ли на заселение в общежитие в универе?"
                 android:layout_marginTop="12dp"
                 android:fontFamily="@font/mont_semibold"
                 android:textColor="#1A1A1A"
                 android:textSize="19sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/edit_what_date"/>
+                app:layout_constraintTop_toBottomOf="@id/edit_private_dorm_neighbour"/>
 
-            <EditText
-                android:id="@+id/edit_how_long"
-                android:layout_width="match_parent"
-                android:layout_height="37dp"
+            <RadioGroup
+                android:id="@+id/private_dorm_radio_group"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
                 android:layout_marginTop="4dp"
-                android:background="@drawable/edit_text_style"
-                android:ems="10"
-                android:fontFamily="@font/mont_regular"
-                android:hint="Например, на учебный год"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:textColorHint="#606060"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
+                android:orientation="horizontal"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/how_long" />
+                app:layout_constraintTop_toBottomOf="@id/private_dorm_applicant">
+
+                <RadioButton
+                    android:id="@+id/dorm_yes_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:textColor="#323232"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Да" />
+
+                <RadioButton
+                    android:id="@+id/dorm_no_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:textColor="#323232"
+                    android:textSize="16sp"
+                    android:layout_marginStart="52dp"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Нет" />
+            </RadioGroup>
 
             <Button
-                android:id="@+id/button_request"
+                android:id="@+id/private_dorm_button"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
@@ -293,7 +354,9 @@
                 android:textSize="13sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/edit_how_long" />
+                app:layout_constraintTop_toBottomOf="@id/private_dorm_radio_group" />
+
+
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

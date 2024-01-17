@@ -5,51 +5,77 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F6F9FF"
-    tools:context=".SettingsActivity">
+    tools:context=".BuyActivity">
 
     <TextView
-        android:id="@+id/settings_title"
+        android:id="@+id/buy_title"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:fontFamily="@font/mont_semibold"
-        android:text="Настройки"
-        android:gravity="bottom"
-        android:textColor="@color/white"
         android:background="#1E4391"
-        android:textSize="19sp"
+        android:fontFamily="@font/mont_semibold"
+        android:gravity="bottom|center"
         android:padding="16dp"
+        android:text="Купить жилье"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        />
+
+    <ImageButton
+        android:id="@+id/back_button_buy"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#1E4391"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/backwards" />
 
     <TextView
-        android:id="@+id/settings_mail"
+        android:id="@+id/service_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/mont_semibold"
-        android:text="Brandonelouis@gmail.com"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        android:textSize="16sp"
-        android:textColor="#323232"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/mont_semibold"
+        android:text="О сервисе"
+        android:textColor="#1A1A1A"
+        android:textSize="19sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/settings_title"/>
+        app:layout_constraintTop_toBottomOf="@id/buy_title" />
 
-    <Button
-        android:id="@+id/leave_button"
+    <TextView
+        android:id="@+id/service_text"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="18dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/mont_regular"
-        android:text="Выйти из приложения"
-        android:textSize="13sp"
-        android:backgroundTint="#1E4391"
-        app:layout_constraintStart_toStartOf="parent"
+        android:text="Сервис помогает людям найти и приобрести идеальное жилье через проверенных риэлторов. Мы предоставляем удобный и надежный способ для покупки жилья, обеспечивая клиентам поддержку и консультации на каждом этапе сделки."
+        android:textColor="#323232"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/settings_mail"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/service_title" />
+
+    <Button
+        android:id="@+id/button_buy"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="#1E4391"
+        android:fontFamily="@font/mont_regular"
+        android:text="Оставить заявку"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/service_text" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottom_menu"
@@ -82,6 +108,7 @@
             android:layout_marginStart="42dp"
             android:layout_marginTop="26dp"
             android:layout_marginBottom="42dp"
+            android:clickable="false"
             android:backgroundTint="@color/white"
             android:src="@drawable/paid_icon"
             app:layout_constraintEnd_toStartOf="@id/menu_button"
@@ -125,8 +152,8 @@
             android:layout_marginStart="42dp"
             android:layout_marginTop="26dp"
             android:layout_marginEnd="22dp"
+            android:layout_marginBottom="42dp"
             android:backgroundTint="@color/white"
-            android:clickable="false"
             android:src="@drawable/settings_icon"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/search_button"

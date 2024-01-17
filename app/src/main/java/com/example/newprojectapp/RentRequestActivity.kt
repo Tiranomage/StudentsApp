@@ -6,20 +6,20 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 
-class RequestActivity : AppCompatActivity() {
+class RentRequestActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_request)
+        setContentView(R.layout.activity_rent_request)
 
-        val backButton: ImageButton = findViewById(R.id.back_button_request)
         val houseButton: ImageButton = findViewById(R.id.house_button)
         val menuButton: ImageButton = findViewById(R.id.menu_button)
         val searchButton: ImageButton = findViewById(R.id.search_button)
         val settingsButton: ImageButton = findViewById(R.id.settings_button)
-        val requestButton: Button = findViewById(R.id.button_request)
+        val rentButton: Button = findViewById(R.id.button_rent_request)
+        val backButton: ImageButton = findViewById(R.id.back_button_rent_request)
 
-        backButton.setOnClickListener {
-            val intent = Intent(this, PaidHouseActivity::class.java)
+        houseButton.setOnClickListener {
+            val intent = Intent(this, HouseActivity::class.java)
             startActivity(intent)
         }
 
@@ -38,13 +38,14 @@ class RequestActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        houseButton.setOnClickListener {
-            val intent = Intent(this, HouseActivity::class.java)
+        /*rentButton.setOnClickListener {
+            val intent = Intent(this, BuyRequestActivity::class.java)
+            startActivity(intent)
+        }*/
+
+        backButton.setOnClickListener {
+            val intent = Intent(this, PaidHousingActivity::class.java)
             startActivity(intent)
         }
-
-        /*requestButton.setOnClickListener {
-
-        }*/
     }
 }

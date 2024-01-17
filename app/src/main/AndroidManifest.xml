@@ -17,6 +17,24 @@
         android:theme="@style/Theme.NewProjectApp"
         tools:targetApi="31">
         <activity
+            android:name=".HouseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PrivateDormActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RentRequestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RentHouseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BuyRequestActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BuyActivity"
+            android:exported="false" />
+        <activity
             android:name=".RequestActivity"
             android:exported="false" />
         <activity

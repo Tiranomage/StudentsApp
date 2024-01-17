@@ -62,11 +62,14 @@
 
     <Spinner
         android:id="@+id/flat_type_spinner"
-        android:layout_width="328dp"
+        android:layout_width="match_parent"
         android:layout_height="51dp"
         android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginTop="4dp"
-        android:dropDownWidth="328dp"
+        android:dropDownWidth="match_parent"
+        android:background="@drawable/edit_text_style"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/flat_type" />
 
@@ -85,11 +88,14 @@
 
     <Spinner
         android:id="@+id/district_spinner"
-        android:layout_width="328dp"
+        android:layout_width="match_parent"
         android:layout_height="51dp"
         android:layout_marginTop="4dp"
         android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edit_text_style"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/district"/>
 
     <TextView
@@ -182,11 +188,14 @@
 
     <Spinner
         android:id="@+id/rental_spinner"
-        android:layout_width="328dp"
+        android:layout_width="match_parent"
         android:layout_height="51dp"
         android:layout_marginTop="4dp"
         android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edit_text_style"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/rental"/>
 
     <TextView
