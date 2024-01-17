@@ -23,9 +23,8 @@ class MenuActivity : AppCompatActivity() {
 
         /*menuEvents.layoutManager = LinearLayoutManager(this)
         menuEvents.adapter = EventsAdapter(events, this)*/
-
-        menuButton.setOnClickListener {
-            val intent = Intent(this, GroupsActivity::class.java)
+        houseButton.setOnClickListener {
+            val intent = Intent(this, HouseActivity::class.java)
             startActivity(intent)
         }
 

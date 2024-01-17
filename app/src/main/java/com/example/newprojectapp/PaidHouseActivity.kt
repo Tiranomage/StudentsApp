@@ -49,6 +49,11 @@ class PaidHouseActivity : AppCompatActivity() {
             textInfoScrollView.visibility = View.VISIBLE
         }
 
+        houseButton.setOnClickListener {
+            val intent = Intent(this, HouseActivity::class.java)
+            startActivity(intent)
+        }
+
         buttonPay.setOnClickListener {
             val intent = Intent(this, RequestActivity::class.java)
             startActivity(intent)

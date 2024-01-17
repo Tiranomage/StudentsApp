@@ -1,0 +1,17 @@
+<!-- custom_radio_button_background.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="true">
+        <shape
+            android:shape="oval">
+            <!-- Add any styling you want for the checked state -->
+            <solid android:color="#1e4391" />
+        </shape>
+    </item>
+    <item android:state_checked="false">
+        <shape
+            android:shape="oval">
+            <!-- Add any styling you want for the unchecked state -->
+            <solid android:color="#e3e6ee" />
+        </shape>
+    </item>
+</selector>
