@@ -15,10 +15,10 @@ class FormActivity6 : AppCompatActivity() {
         val forwardButton: ImageButton = findViewById(R.id.forward_button)
 
 
-        /*forwardButton.setOnClickListener {
+        forwardButton.setOnClickListener {
             val intent = Intent(this, NeighboursActivity::class.java)
             startActivity(intent)
-        }*/
+        }
 
         backButton.setOnClickListener {
             val intent = Intent(this, SearchActivity::class.java)

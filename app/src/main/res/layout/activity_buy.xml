@@ -29,9 +29,10 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="60dp"
         android:backgroundTint="#1E4391"
+        android:background="@drawable/rounded_button"
+        app:srcCompat="@drawable/backwards"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/backwards" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/service_title"

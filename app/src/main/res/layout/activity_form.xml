@@ -31,7 +31,8 @@
         android:backgroundTint="#1E4391"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/backwards" />
+        android:background="@drawable/rounded_button"
+        app:srcCompat="@drawable/backwards" />
 
     <TextView
         android:id="@+id/private_info"

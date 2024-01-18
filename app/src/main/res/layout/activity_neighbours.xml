@@ -5,100 +5,82 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:backgroundTint="#F6F9FF"
-    tools:context=".PaymentActivity">
+    tools:context=".NeighboursActivity">
 
-    <TextView
-        android:id="@+id/payment_title"
+    <View
+        android:id="@+id/top_view"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="#1E4391"
-        android:fontFamily="@font/mont_semibold"
-        android:gravity="bottom|center"
-        android:padding="16dp"
-        android:text="Платежи"
-        android:textColor="@color/white"
-        android:textSize="19sp"
+        android:background="#1e4391"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent"/>
 
-    <ImageButton
-        android:id="@+id/back_button_payment"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="60dp"
-        android:backgroundTint="#1E4391"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="@drawable/rounded_button"
-        app:srcCompat="@drawable/backwards" />
-
-
-    <ScrollView
+    <View
+        android:id="@+id/profile_view"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:fillViewport="true"
-        app:layout_constraintBottom_toTopOf="@id/bottom_menu"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="-103dp"
+        android:elevation="16dp"
+        android:background="@drawable/rounded_view"
+        app:layout_constraintTop_toBottomOf="@id/top_view"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/payment_title">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/profileImage"/>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp">
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:elevation="16dp"
+        android:layout_weight="1"
+        android:scaleType="fitXY"
+        android:src="@drawable/profile_img"
+        app:layout_constraintEnd_toEndOf="@+id/profile_view"
+        app:layout_constraintStart_toStartOf="@id/profile_view"
+        app:layout_constraintTop_toTopOf="@id/profile_view" />
 
-            <TextView
-                android:id="@+id/payment_text1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/mont_regular"
-                android:text="Если ты не знаешь как или просто забыл это сделать, то давай освежим в памяти весь процесс вместе!
-Существует несколько способов оплаты за проживание в общежитии:"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:elevation="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/profile_view"
+        app:layout_constraintStart_toStartOf="@id/profile_view"
+        app:layout_constraintTop_toBottomOf="@id/profileImage" />
 
-            <TextView
-                android:id="@+id/payment_text2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:fontFamily="@font/mont_regular"
-                android:text="@string/pay_urfu_ru"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:gravity="top"
-                android:letterSpacing="0.01"
-                android:lineSpacingExtra="0sp"
-                android:translationY="-0.16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/payment_text1" />
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/backwards"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="68dp"
+        android:elevation="16dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="#323232"
+        app:layout_constraintStart_toStartOf="@id/profile_view"
+        app:layout_constraintTop_toBottomOf="@id/profileImage"/>
 
-            <TextView
-                android:id="@+id/payment_text3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:fontFamily="@font/mont_regular"
-                android:text="А также не забывай вносить оплату своевременно, чтобы продолжать счастливо жить в наших любимых общежитиях"
-                android:textColor="#000000"
-                android:textSize="16sp"
-                android:gravity="top"
-                android:letterSpacing="0.01"
-                android:lineSpacingExtra="0sp"
-                android:translationY="-0.16sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/payment_text2" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="68dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="#1e4391"
+        android:elevation="16dp"
+        app:srcCompat="@drawable/button1_icon"
+        app:layout_constraintEnd_toEndOf="@id/profile_view"
+        app:layout_constraintTop_toBottomOf="@id/profileImage"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/bottom_menu"
@@ -131,7 +113,6 @@
             android:layout_marginStart="42dp"
             android:layout_marginTop="26dp"
             android:layout_marginBottom="42dp"
-            android:clickable="false"
             android:backgroundTint="@color/white"
             android:src="@drawable/paid_icon"
             app:layout_constraintEnd_toStartOf="@id/menu_button"
