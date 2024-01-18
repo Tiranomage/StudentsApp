@@ -12,7 +12,6 @@ class MenuActivity : AppCompatActivity() {
 
         val houseButton: ImageButton = findViewById(R.id.house_button)
         val paidButton: ImageButton = findViewById(R.id.paid_button)
-        val menuButton: ImageButton = findViewById(R.id.menu_button)
         val searchButton: ImageButton = findViewById(R.id.search_button)
         val settingsButton: ImageButton = findViewById(R.id.settings_button)
         // val menuEvents: RecyclerView = findViewById(R.id.menu_events)

@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#F6F9FF"
+    tools:context=".ProfileActivity">
+
+    <TextView
+        android:id="@+id/user_profile_title"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#1E4391"
+        android:fontFamily="@font/mont_semibold"
+        android:gravity="bottom|center"
+        android:padding="16dp"
+        android:text="Иван, 21"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <ImageButton
+        android:id="@+id/back_button_user_profile"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="#1E4391"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/rounded_button"
+        app:srcCompat="@drawable/backwards" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:paddingBottom="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/user_profile_title">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F6F9FF"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/profileImage"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/profile_img"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="О себе"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/mont_semibold"
+                android:textColor="#000000"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profileImage"/>
+
+            <TextView
+                android:id="@+id/profile_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/mont_regular"
+                android:textColor="#000000"
+                android:textSize="13sp"
+                android:text="Привет, меня зовут Иван, я студент и люблю проводить время за компьютером. Я активно занимаюсь спортом и веду здоровый образ жизни."
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView"/>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Характеристика себя"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/mont_semibold"
+                android:textColor="#000000"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/profile_desc"/>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Жилищные предпочтения"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/mont_semibold"
+                android:textColor="#000000"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/smoke"/>
+
+            <TextView
+                android:id="@+id/life_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Жаворонок"
+                android:layout_marginTop="12dp"
+                android:textSize="13sp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:fontFamily="@font/mont_regular"
+                android:textColor="@drawable/radio_button_text_color_selector"
+                android:background="@drawable/custom_button_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView3"/>
+
+            <TextView
+                android:id="@+id/citizenship"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Гражданин РФ"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="8dp"
+                android:textSize="13sp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:fontFamily="@font/mont_regular"
+                android:textColor="@drawable/radio_button_text_color_selector"
+                android:background="@drawable/custom_button_background"
+                app:layout_constraintStart_toEndOf="@id/life_style"
+                app:layout_constraintTop_toBottomOf="@id/textView3"/>
+
+            <TextView
+                android:id="@+id/alco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Не пью"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="8dp"
+                android:textSize="13sp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:fontFamily="@font/mont_regular"
+                android:textColor="@drawable/radio_button_text_color_selector"
+                android:background="@drawable/custom_button_background"
+                app:layout_constraintStart_toEndOf="@id/citizenship"
+                app:layout_constraintTop_toBottomOf="@id/textView3"/>
+
+            <TextView
+                android:id="@+id/smoke"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Не курю"
+                android:layout_marginTop="12dp"
+                android:textSize="13sp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:fontFamily="@font/mont_regular"
+                android:textColor="@drawable/radio_button_text_color_selector"
+                android:background="@drawable/custom_button_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/life_style"/>
+
+            <TextView
+                android:id="@+id/animal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Есть животное"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="8dp"
+                android:textSize="13sp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:fontFamily="@font/mont_regular"
+                android:textColor="@drawable/radio_button_text_color_selector"
+                android:background="@drawable/custom_button_background"
+                app:layout_constraintStart_toEndOf="@id/smoke"
+                app:layout_constraintTop_toBottomOf="@id/life_style"/>
+
+            <TextView
+                android:id="@+id/local"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Кировский р-н"
+                android:layout_marginTop="12dp"
+                android:textSize="13sp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:fontFamily="@font/mont_regular"
+                android:textColor="@drawable/radio_button_text_color_selector"
+                android:background="@drawable/custom_button_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView4"/>
+
+            <TextView
+                android:id="@+id/money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="От 15000 до 25000 руб."
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="8dp"
+                android:textSize="13sp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:fontFamily="@font/mont_regular"
+                android:textColor="@drawable/radio_button_text_color_selector"
+                android:background="@drawable/custom_button_background"
+                app:layout_constraintStart_toEndOf="@id/local"
+                app:layout_constraintTop_toBottomOf="@id/textView4"/>
+
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Комната"
+                android:layout_marginTop="12dp"
+                android:textSize="13sp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:fontFamily="@font/mont_regular"
+                android:textColor="@drawable/radio_button_text_color_selector"
+                android:background="@drawable/custom_button_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/local"/>
+
+            <TextView
+                android:id="@+id/times"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="От года"
+                android:layout_marginTop="12dp"
+                android:layout_marginStart="8dp"
+                android:textSize="13sp"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:fontFamily="@font/mont_regular"
+                android:textColor="@drawable/radio_button_text_color_selector"
+                android:background="@drawable/custom_button_background"
+                app:layout_constraintStart_toEndOf="@id/type"
+                app:layout_constraintTop_toBottomOf="@id/local"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="96dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/times"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <View
+        android:id="@+id/imageView3"
+        android:layout_width="208dp"
+        android:layout_height="66dp"
+        android:src="@tools:sample/avatars"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:elevation="16dp"
+        android:background="@drawable/max_rounded_view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_menu"/>
+
+    <ImageButton
+        android:id="@+id/refuse_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/refuse_icon"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:elevation="16dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="#FF3347"
+        app:layout_constraintStart_toStartOf="@id/imageView3"
+        app:layout_constraintTop_toTopOf="@id/imageView3"/>
+
+    <ImageButton
+        android:id="@+id/like_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="#1e4391"
+        android:elevation="16dp"
+        app:srcCompat="@drawable/star"
+        app:layout_constraintEnd_toEndOf="@id/imageView3"
+        app:layout_constraintTop_toTopOf="@id/imageView3"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:progress="80"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="80dp"
+        android:elevation="16dp"
+        app:layout_constraintStart_toStartOf="@id/imageView3"
+        app:layout_constraintTop_toTopOf="@id/imageView3"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_menu"
+        android:layout_width="match_parent"
+        android:layout_height="92dp"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Button 1 -->
+        <ImageButton
+            android:id="@+id/house_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="42dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/house_icon"
+            app:layout_constraintEnd_toStartOf="@id/paid_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Button 2 -->
+        <ImageButton
+            android:id="@+id/paid_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="42dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/paid_icon"
+            app:layout_constraintEnd_toStartOf="@id/menu_button"
+            app:layout_constraintStart_toEndOf="@id/house_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Button 3 -->
+        <ImageButton
+            android:id="@+id/menu_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="32dp"
+            android:backgroundTint="#1E4391"
+            android:src="@drawable/menu_icon"
+            android:background="@drawable/rounded_button"
+            app:layout_constraintEnd_toStartOf="@id/search_button"
+            app:layout_constraintStart_toEndOf="@id/paid_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Button 4 -->
+        <ImageButton
+            android:id="@+id/search_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginBottom="42dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/search_icon"
+            android:clickable="false"
+            app:layout_constraintEnd_toStartOf="@id/settings_button"
+            app:layout_constraintStart_toEndOf="@id/menu_button"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Button 5 -->
+        <ImageButton
+            android:id="@+id/settings_button"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="42dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginBottom="42dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/settings_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/search_button"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
