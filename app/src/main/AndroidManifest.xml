@@ -17,6 +17,18 @@
         android:theme="@style/Theme.NewProjectApp"
         tools:targetApi="31">
         <activity
+            android:name=".RulesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MedicalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FireActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PaymentActivity"
+            android:exported="false" />
+        <activity
             android:name=".HouseActivity"
             android:exported="false" />
         <activity

@@ -44,14 +44,7 @@
             android:layout_marginTop="12dp"
             android:fontFamily="@font/mont_regular"
             android:textSize="16sp"
-            android:text="Сервис по поиску сожителя на сайте
-– это надежный помощник в поиске идеального сожителя. Вот несколько преимуществ, которые вы получите, используя наш сервис:
-Экономия времени и денег
-Широкий выбор
-Фильтры и поиск
-Безопасность
-Легкий контакт
-"
+            android:text="@string/search_description"
             app:layout_constraintTop_toBottomOf="@id/strange_img"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"/>

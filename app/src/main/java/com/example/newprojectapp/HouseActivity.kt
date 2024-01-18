@@ -44,7 +44,7 @@ class HouseActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        /*paymentButton.setOnClickListener {
+        paymentButton.setOnClickListener {
             val intent = Intent(this, PaymentActivity::class.java)
             startActivity(intent)
         }
@@ -62,7 +62,7 @@ class HouseActivity : AppCompatActivity() {
         rulesButton.setOnClickListener {
             val intent = Intent(this,RulesActivity::class.java)
             startActivity(intent)
-        }*/
+        }
 
         paidButton.setOnClickListener {
             val intent = Intent(this, PaidHousingActivity::class.java)
