@@ -249,7 +249,7 @@
         app:layout_constraintTop_toBottomOf="@id/alcohol_group" />
 
     <EditText
-        android:id="@+id/user_birth_date"
+        android:id="@+id/edit_self_desc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -265,10 +265,10 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/citizenship" />
+        app:layout_constraintTop_toBottomOf="@id/self_description" />
 
     <TextView
-        android:id="@+id/citizenship"
+        android:id="@+id/self_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="О себе"
