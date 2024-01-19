@@ -1,11 +1,18 @@
 package com.example.newprojectapp
 
+import android.annotation.SuppressLint
 import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
-class DBHelper(val context: Context, val factory: SQLiteDatabase.CursorFactory?) :
+import java.sql.Connection
+import java.sql.DriverManager
+import java.sql.PreparedStatement
+import java.sql.ResultSet
+import java.sql.Statement
+
+/*class DBHelper(val context: Context, val factory: SQLiteDatabase.CursorFactory?) :
     SQLiteOpenHelper(context, "app", factory, 1) {
 
     override fun onCreate(db: SQLiteDatabase?) {
@@ -35,4 +42,135 @@ class DBHelper(val context: Context, val factory: SQLiteDatabase.CursorFactory?)
         val result = db.rawQuery("SELECT * FROM users WHERE email = '$email' AND pass = '$pass'", null)
         return result.moveToFirst()
     }
+}*/
+
+class DBHelper() {
+    private val url = "jdbc:postgresql://rc1b-2qanv6f4tdpmgnud.mdb.yandexcloud.net:6432/db1?targetServerType=master&ssl=false&sslmode=disable"
+    private val user = "user1"
+    private val password = "123456789"
+
+    init {
+        try {
+            Class.forName("org.postgresql.Driver")
+        } catch (e: ClassNotFoundException) {
+            e.printStackTrace()
+        }
+    }
+
+    fun getConnection(): Connection? {
+        return try {
+            DriverManager.getConnection(url, user, password)
+        } catch (e: Exception) {
+            e.printStackTrace()
+            null
+        }
+    }
+
+    fun addNewUser(mail: String, password: String, name: String?, gender: String?) {
+        println("OK")
+        val connection = getConnection()
+        println("OK")
+        if (connection != null) {
+            try {
+                println("OK")
+                val query = "INSERT INTO users (mail, password, name, gender) VALUES (?, ?, ?, ?)"
+                val preparedStatement = connection.prepareStatement(query)
+
+                preparedStatement.setString(1, mail)
+                preparedStatement.setString(2, password)
+                if (name != null)
+                    preparedStatement.setString(3, name) // Default to 0 if age is null
+                if (gender != null)
+                    preparedStatement.setString(4, gender)
+
+                preparedStatement.execute()
+
+                println("User added successfully.")
+                preparedStatement.close()
+            } catch (e: Exception) {
+                e.printStackTrace()
+            } finally {
+                connection.close()
+            }
+        }
+    }
+
+    fun registerUser(username: String, pass: String): Boolean {
+        var connection: Connection? = null
+        var preparedStatement: PreparedStatement? = null
+
+        return try {
+            connection = DriverManager.getConnection(url, user, password)
+            val query = "INSERT INTO users (mail, password, name, gender) VALUES (?, ?, ?, ?)"
+            preparedStatement = connection.prepareStatement(query)
+            preparedStatement.setString(1, username)
+            preparedStatement.setString(2, pass)
+            preparedStatement.setString(3, "Олег")
+            preparedStatement.setString(4, "М")
+            preparedStatement.executeUpdate() > 0
+        } finally {
+            preparedStatement?.close()
+            connection?.close()
+        }
+    }
+
+    fun userExists(mail: String, password: String): Boolean {
+        val connection = getConnection()
+        if (connection != null) {
+            try {
+                val query = "SELECT COUNT(*) AS count FROM users WHERE mail = ? AND password = ?"
+                val preparedStatement: PreparedStatement = connection.prepareStatement(query)
+
+                preparedStatement.setString(1, mail)
+                preparedStatement.setString(2, password)
+
+                val resultSet: ResultSet = preparedStatement.executeQuery()
+
+                if (resultSet.next()) {
+                    val count = resultSet.getInt("count")
+                    return count > 0
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+            } finally {
+                connection.close()
+            }
+        }
+        return false
+    }
+
+    fun fetchDataFromUserTable() {
+        val connection = getConnection()
+        if (connection != null) {
+            try {
+                val statement: Statement = connection.createStatement()
+                val query = "SELECT * FROM users"
+                val resultSet: ResultSet = statement.executeQuery(query)
+
+                while (resultSet.next()) {
+                    val userId = resultSet.getInt("id")
+                    val userMail = resultSet.getString("mail")
+                    val userPassword = resultSet.getString("password")
+                    val userName = resultSet.getString("name")
+                    val userGender = resultSet.getString("gender")
+
+                    println("User ID: $userId, Mail: $userMail, Password: $userPassword, Name: $userName, Gender: $userGender")
+                }
+
+                resultSet.close()
+                statement.close()
+            } catch (e: Exception) {
+                e.printStackTrace()
+            } finally {
+                connection.close()
+            }
+        }
+    }
+}
+
+fun main() {
+    val dbHelper = DBHelper()
+
+    // Establish connection and fetch data from the user table
+    dbHelper.fetchDataFromUserTable()
 }

@@ -30,17 +30,17 @@ class RegActivity : AppCompatActivity() {
             if(email == "" || pass == "")
                 Toast.makeText(this, "Не все поля заполнены", Toast.LENGTH_LONG).show()
             else {
-                val user = User(email, pass)
+                val db = DBHelper()
+                val newUserAdded = db.addNewUser(email, pass, "oleg", "M")
+                if (newUserAdded != null) {
+                    Toast.makeText(this, "Регистрация успешна", Toast.LENGTH_LONG).show()
 
-                val db = DBHelper(this, null)
-                db.addUser(user)
-                Toast.makeText(this, "Регистрация успешна", Toast.LENGTH_LONG).show()
+                    userEmail.text.clear()
+                    userPass.text.clear()
 
-                userEmail.text.clear()
-                userPass.text.clear()
-
-                val intent = Intent(this, MenuActivity::class.java)
-                startActivity(intent)
+                    val intent = Intent(this, MenuActivity::class.java)
+                    startActivity(intent)
+                }
             }
         }
     }

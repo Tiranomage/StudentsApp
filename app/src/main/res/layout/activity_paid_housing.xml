@@ -153,9 +153,10 @@
                 android:layout_width="327dp"
                 android:layout_height="310dp"
                 android:layout_marginTop="8dp"
-                tools:src="@drawable/tables"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/free_service_text2"/>
+                app:layout_constraintTop_toBottomOf="@id/free_service_text2"
+                app:srcCompat="@drawable/tables"
+                tools:srcCompat="@drawable/tables" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

@@ -31,8 +31,8 @@ class AuthActivity : AppCompatActivity() {
                 Toast.makeText(this, "Не все поля заполнены", Toast.LENGTH_LONG).show()
             else {
 
-                val db = DBHelper(this, null)
-                val isAuth = db.getUser(email, pass)
+                val db = DBHelper()
+                val isAuth = db.userExists(email, pass)
 
                 if(isAuth){
                     Toast.makeText(this, "Авторизация успешна", Toast.LENGTH_LONG).show()
