@@ -34,201 +34,1202 @@
         android:background="@drawable/rounded_button"
         app:srcCompat="@drawable/backwards" />
 
-    <TextView
-        android:id="@+id/private_info"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Личная информация"
-        android:layout_marginTop="24dp"
-        android:layout_marginStart="16dp"
-        android:fontFamily="@font/mont_semibold"
-        android:textColor="#000000"
-        android:textSize="23sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/form_title"
-        />
-
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Имя"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:fontFamily="@font/mont_semibold"
-        android:textColor="#1A1A1A"
-        android:textSize="19sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/private_info"/>
-
-    <EditText
-        android:id="@+id/edit_name"
+    <ScrollView
+        android:id="@+id/scroll1"
         android:layout_width="match_parent"
-        android:layout_height="51dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:background="@drawable/edit_text_style"
-        android:ems="10"
-        android:fontFamily="@font/mont_regular"
-        android:hint="Имя"
-        android:paddingStart="16dp"
-        android:textColorHint="#606060"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        android:background="#F6F9FF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/name" />
+        app:layout_constraintTop_toBottomOf="@id/form_title">
 
-    <TextView
-        android:id="@+id/gender"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Пол"
-        android:layout_marginTop="12dp"
-        android:layout_marginStart="16dp"
-        android:fontFamily="@font/mont_semibold"
-        android:textColor="#1A1A1A"
-        android:textSize="19sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_name" />
-
-    <RadioGroup
-        android:id="@+id/gender_group"
-        android:layout_width="wrap_content"
-        android:layout_height="24dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/gender"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:id="@+id/female_button"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Женский"
-            android:fontFamily="@font/mont_regular"
-            android:textColor="#323232"
-            android:textSize="16sp"/>
+            android:padding="16dp">
 
-        <RadioButton
-            android:id="@+id/male_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="52dp"
-            android:text="Мужской"
-            android:fontFamily="@font/mont_regular"
-            android:textColor="#323232"
-            android:textSize="16sp"/>
-    </RadioGroup>
+            <TextView
+                android:id="@+id/private_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Личная информация"
+                android:textColor="#000000"
+                android:textSize="23sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/ref_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ссылка на соцсети"
-        android:layout_marginTop="12dp"
-        android:layout_marginStart="16dp"
-        android:fontFamily="@font/mont_semibold"
-        android:textColor="#1A1A1A"
-        android:textSize="19sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/gender_group" />
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Имя"
+                android:textColor="#1A1A1A"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/private_info" />
 
-    <EditText
-        android:id="@+id/edit_ref"
+            <EditText
+                android:id="@+id/edit_name"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edit_text_style"
+                android:ems="10"
+                android:fontFamily="@font/mont_regular"
+                android:hint="Имя"
+                android:paddingStart="16dp"
+                android:textColorHint="#606060"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/name" />
+
+            <TextView
+                android:id="@+id/gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Пол"
+                android:textColor="#1A1A1A"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edit_name" />
+
+            <RadioGroup
+                android:id="@+id/gender_group"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gender">
+
+                <RadioButton
+                    android:id="@+id/female_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Женский"
+                    android:textColor="#323232"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/male_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="52dp"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Мужской"
+                    android:textColor="#323232"
+                    android:textSize="16sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/ref_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Ссылка на соцсети"
+                android:textColor="#1A1A1A"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gender_group" />
+
+            <EditText
+                android:id="@+id/edit_ref"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edit_text_style"
+                android:ems="10"
+                android:fontFamily="@font/mont_regular"
+                android:hint="Например, Telegram"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColorHint="#606060"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ref_text" />
+
+            <TextView
+                android:id="@+id/birth_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Возраст"
+                android:textColor="#1A1A1A"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edit_ref" />
+
+            <EditText
+                android:id="@+id/user_birth_date"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edit_text_style"
+                android:ems="10"
+                android:fontFamily="@font/mont_regular"
+                android:hint="Возраст"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColorHint="#606060"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/birth_date" />
+
+            <TextView
+                android:id="@+id/citizenship"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Гражданство РФ"
+                android:textColor="#1A1A1A"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/user_birth_date" />
+
+            <RadioGroup
+                android:id="@+id/citizenship_group"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/citizenship">
+
+                <RadioButton
+                    android:id="@+id/yes_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Да"
+                    android:textColor="#323232"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/no_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="52dp"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Нет"
+                    android:textColor="#323232"
+                    android:textSize="16sp" />
+            </RadioGroup>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scroll2"
         android:layout_width="match_parent"
-        android:layout_height="51dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:background="@drawable/edit_text_style"
-        android:ems="10"
-        android:fontFamily="@font/mont_regular"
-        android:hint="Например, Telegram"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:textColorHint="#606060"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="0dp"
+        android:background="#F6F9FF"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ref_text" />
+        app:layout_constraintTop_toBottomOf="@id/form_title">
 
-    <TextView
-        android:id="@+id/birth_date"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Дата рождения"
-        android:layout_marginTop="12dp"
-        android:layout_marginStart="16dp"
-        android:fontFamily="@font/mont_semibold"
-        android:textColor="#1A1A1A"
-        android:textSize="19sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/edit_ref" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
 
-    <EditText
-        android:id="@+id/user_birth_date"
+            <TextView
+                android:id="@+id/self_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Характеристика себя"
+                android:textColor="#000000"
+                android:textSize="23sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/chronotype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Ваш хронотип"
+                android:textColor="#1A1A1A"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/self_desc" />
+
+            <RadioGroup
+                android:id="@+id/chronotype_group"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/chronotype">
+
+                <RadioButton
+                    android:id="@+id/owl_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Сова"
+                    android:textColor="#323232"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/lark_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="52dp"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Жаворонок"
+                    android:textColor="#323232"
+                    android:textSize="16sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/smoking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Отношение к курению"
+                android:textColor="#1A1A1A"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/chronotype_group" />
+
+            <RadioGroup
+                android:id="@+id/smoking_group"
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/smoking">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/pos_smoke_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:fontFamily="@font/mont_regular"
+                            android:text="Положительное"
+                            android:textColor="#323232"
+                            android:textSize="16sp" />
+
+                        <RadioButton
+                            android:id="@+id/neutral_smoke_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginEnd="16dp"
+                            android:fontFamily="@font/mont_regular"
+                            android:text="Нейтральное"
+                            android:textColor="#323232"
+                            android:textSize="16sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="4dp">
+
+                        <RadioButton
+                            android:id="@+id/neg_snoke_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
+                            android:fontFamily="@font/mont_regular"
+                            android:text="Отрицательное"
+                            android:textColor="#323232"
+                            android:textSize="16sp" />
+                    </TableRow>
+
+                </TableLayout>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/alcohol_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Отношение к алкоголю"
+                android:textColor="#1A1A1A"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/smoking_group" />
+
+            <RadioGroup
+                android:id="@+id/alcohol_group"
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/alcohol_text">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/pos_alcohol_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:fontFamily="@font/mont_regular"
+                            android:text="Положительное"
+                            android:textColor="#323232"
+                            android:textSize="16sp" />
+
+                        <RadioButton
+                            android:id="@+id/neutral_alcohol_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginEnd="16dp"
+                            android:fontFamily="@font/mont_regular"
+                            android:text="Нейтральное"
+                            android:textColor="#323232"
+                            android:textSize="16sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="4dp">
+
+                        <RadioButton
+                            android:id="@+id/neg_alcohol_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
+                            android:fontFamily="@font/mont_regular"
+                            android:text="Отрицательное"
+                            android:textColor="#323232"
+                            android:textSize="16sp" />
+                    </TableRow>
+
+                </TableLayout>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/animal_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Есть животные?"
+                android:textColor="#1A1A1A"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/alcohol_group" />
+
+            <EditText
+                android:id="@+id/edit_self_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edit_text_style"
+                android:ems="10"
+                android:fontFamily="@font/mont_regular"
+                android:hint="Напишите о ваших увлечениях и других подробностях, которые могли бы быть важны вашему соседу"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColorHint="#606060"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/self_description" />
+
+            <TextView
+                android:id="@+id/self_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="О себе"
+                android:textColor="#1A1A1A"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/animal_group" />
+
+            <RadioGroup
+                android:id="@+id/animal_group"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/animal_text">
+
+                <RadioButton
+                    android:id="@+id/animal_yes_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Да"
+                    android:textColor="#323232"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/animal_no_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="52dp"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Нет"
+                    android:textColor="#323232"
+                    android:textSize="16sp" />
+            </RadioGroup>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scroll3"
         android:layout_width="match_parent"
-        android:layout_height="51dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:background="@drawable/edit_text_style"
-        android:ems="10"
-        android:fontFamily="@font/mont_regular"
-        android:hint="Дата рождения"
-        android:inputType="date"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:textColorHint="#606060"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="0dp"
+        android:background="#F6F9FF"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/birth_date" />
+        app:layout_constraintTop_toBottomOf="@id/form_title">
 
-    <TextView
-        android:id="@+id/citizenship"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Гражданство РФ"
-        android:layout_marginTop="12dp"
-        android:layout_marginStart="16dp"
-        android:fontFamily="@font/mont_semibold"
-        android:textColor="#1A1A1A"
-        android:textSize="19sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/user_birth_date" />
-
-    <RadioGroup
-        android:id="@+id/citizenship_group"
-        android:layout_width="wrap_content"
-        android:layout_height="24dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/citizenship"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:id="@+id/yes_button"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Да"
-            android:fontFamily="@font/mont_regular"
-            android:textColor="#323232"
-            android:textSize="16sp"/>
+            android:padding="16dp">
 
-        <RadioButton
-            android:id="@+id/no_button"
+            <TextView
+                android:id="@+id/self_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Ваши фото"
+                android:textColor="#000000"
+                android:textSize="23sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/first_photo"
+                android:layout_width="216dp"
+                android:layout_height="208dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/self_photo"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/second_photo"
+                android:layout_width="104dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@id/first_photo"
+                app:layout_constraintTop_toBottomOf="@id/self_photo"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/third_photo"
+                android:layout_width="104dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@id/first_photo"
+                app:layout_constraintTop_toBottomOf="@id/second_photo"
+                tools:srcCompat="@tools:sample/avatars" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scroll4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#F6F9FF"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/form_title">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="52dp"
-            android:text="Нет"
-            android:fontFamily="@font/mont_regular"
-            android:textColor="#323232"
-            android:textSize="16sp"/>
-    </RadioGroup>
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/flat_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Жилищные предпочтения"
+                android:textColor="#000000"
+                android:textSize="23sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/flat_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Тип жилья"
+                android:textColor="#1A1A1A"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/flat_desc" />
+
+            <Spinner
+                android:id="@+id/flat_type_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edit_text_style"
+                android:dropDownWidth="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/flat_type" />
+
+            <TextView
+                android:id="@+id/district"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Тип жилья"
+                android:textColor="#1A1A1A"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/flat_type_spinner" />
+
+            <Spinner
+                android:id="@+id/district_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edit_text_style"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/district" />
+
+            <TextView
+                android:id="@+id/budget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Бюджет"
+                android:textColor="#1A1A1A"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/district_spinner" />
+
+            <EditText
+                android:id="@+id/from_price"
+                android:layout_width="95dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edit_text_style"
+                android:ems="10"
+                android:fontFamily="@font/mont_regular"
+                android:hint="От"
+                android:inputType="number"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="#606060"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/budget" />
+
+            <TextView
+                android:id="@+id/rub1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="34dp"
+                android:fontFamily="@font/mont_regular"
+                android:text="руб."
+                android:textColor="#323232"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/from_price"
+                app:layout_constraintTop_toBottomOf="@id/budget" />
+
+            <EditText
+                android:id="@+id/to_price"
+                android:layout_width="95dp"
+                android:layout_height="51dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edit_text_style"
+                android:ems="10"
+                android:fontFamily="@font/mont_regular"
+                android:hint="До"
+                android:inputType="number"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="#606060"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/rub1"
+                app:layout_constraintTop_toBottomOf="@id/budget" />
+
+            <TextView
+                android:id="@+id/rub2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="34dp"
+                android:fontFamily="@font/mont_regular"
+                android:text="руб."
+                android:textColor="#323232"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/to_price"
+                app:layout_constraintTop_toBottomOf="@id/budget" />
+
+            <TextView
+                android:id="@+id/rental"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Срок аренды"
+                android:textColor="#1A1A1A"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/from_price" />
+
+            <Spinner
+                android:id="@+id/rental_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edit_text_style"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rental" />
+
+            <TextView
+                android:id="@+id/period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Период проживания"
+                android:textColor="#1A1A1A"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rental_spinner" />
+
+            <EditText
+                android:id="@+id/from_live"
+                android:layout_width="95dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edit_text_style"
+                android:ems="10"
+                android:fontFamily="@font/mont_regular"
+                android:hint="С"
+                android:inputType="date"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="#606060"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/period" />
+
+            <TextView
+                android:id="@+id/dash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="26.5dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="—"
+                android:textSize="10sp"
+                app:layout_constraintStart_toEndOf="@id/from_live"
+                app:layout_constraintTop_toBottomOf="@id/period" />
+
+            <EditText
+                android:id="@+id/to_live"
+                android:layout_width="95dp"
+                android:layout_height="51dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edit_text_style"
+                android:ems="10"
+                android:fontFamily="@font/mont_regular"
+                android:hint="По"
+                android:inputType="date"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="#606060"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/from_live"
+                app:layout_constraintTop_toBottomOf="@id/period" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scroll5"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#F6F9FF"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/form_title">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/flat_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Фото квартиры"
+                android:textColor="#000000"
+                android:textSize="23sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/first_flat_photo"
+                android:layout_width="216dp"
+                android:layout_height="208dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/flat_photo"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/second_flat_photo"
+                android:layout_width="104dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toEndOf="@id/first_flat_photo"
+                app:layout_constraintTop_toBottomOf="@id/flat_photo"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <ImageView
+                android:id="@+id/third_flat_photo"
+                android:layout_width="104dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintStart_toEndOf="@id/first_flat_photo"
+                app:layout_constraintTop_toBottomOf="@id/second_flat_photo"
+                tools:srcCompat="@tools:sample/avatars" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scroll6"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#F6F9FF"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/form_title">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/neighbour_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Характеристика соседа"
+                android:textColor="#000000"
+                android:textSize="23sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/live_period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Период проживания"
+                android:textColor="#1A1A1A"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/neighbour_desc" />
+
+            <EditText
+                android:id="@+id/from_live_neighbour"
+                android:layout_width="95dp"
+                android:layout_height="51dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edit_text_style"
+                android:ems="10"
+                android:fontFamily="@font/mont_regular"
+                android:hint="С"
+                android:inputType="date"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="#606060"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/live_period" />
+
+            <TextView
+                android:id="@+id/dash_neighbour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="26.5dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="—"
+                android:textSize="10sp"
+                app:layout_constraintStart_toEndOf="@id/from_live_neighbour"
+                app:layout_constraintTop_toBottomOf="@id/live_period" />
+
+            <EditText
+                android:id="@+id/to_live_neighbour"
+                android:layout_width="95dp"
+                android:layout_height="51dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/edit_text_style"
+                android:ems="10"
+                android:fontFamily="@font/mont_regular"
+                android:hint="По"
+                android:inputType="date"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="#606060"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/from_live_neighbour"
+                app:layout_constraintTop_toBottomOf="@id/live_period" />
+
+            <TextView
+                android:id="@+id/wish_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Пол"
+                android:textColor="#1A1A1A"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/from_live_neighbour" />
+
+            <RadioGroup
+                android:id="@+id/wish_gender_group"
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/wish_gender">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/female_wish_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
+                            android:fontFamily="@font/mont_regular"
+                            android:text="Женский"
+                            android:textColor="#323232"
+                            android:textSize="16sp" />
+
+                        <RadioButton
+                            android:id="@+id/male_wish_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="52dp"
+                            android:fontFamily="@font/mont_regular"
+                            android:text="Мужской"
+                            android:textColor="#323232"
+                            android:textSize="16sp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="4dp">
+
+                        <RadioButton
+                            android:id="@+id/free_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:fontFamily="@font/mont_regular"
+                            android:text="Любой"
+                            android:textColor="#323232"
+                            android:textSize="16sp" />
+                    </TableRow>
+                </TableLayout>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/wish_chronotype"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Желаемый хронотип"
+                android:textColor="#1A1A1A"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/wish_gender_group" />
+
+            <RadioGroup
+                android:id="@+id/wish_chronotype_group"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/wish_chronotype">
+
+                <RadioButton
+                    android:id="@+id/owl_wish_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Сова"
+                    android:textColor="#323232"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/lark_wish_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="52dp"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Жаворонок"
+                    android:textColor="#323232"
+                    android:textSize="16sp" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/wish_smoking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Отношение к курению"
+                android:textColor="#1A1A1A"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/wish_chronotype_group" />
+
+            <RadioGroup
+                android:id="@+id/wish_smoking_group"
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/wish_smoking">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/pos_wish_smoke_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:fontFamily="@font/mont_regular"
+                            android:text="Положительное"
+                            android:textColor="#323232"
+                            android:textSize="16sp" />
+
+                        <RadioButton
+                            android:id="@+id/neutral_wish_smoke_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginEnd="16dp"
+                            android:fontFamily="@font/mont_regular"
+                            android:text="Нейтральное"
+                            android:textColor="#323232"
+                            android:textSize="16sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="4dp">
+
+                        <RadioButton
+                            android:id="@+id/neg_wish_snoke_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
+                            android:fontFamily="@font/mont_regular"
+                            android:text="Отрицательное"
+                            android:textColor="#323232"
+                            android:textSize="16sp" />
+                    </TableRow>
+
+                </TableLayout>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/wish_alcohol_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Отношение к алкоголю"
+                android:textColor="#1A1A1A"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/wish_smoking_group" />
+
+            <RadioGroup
+                android:id="@+id/wish_alcohol_group"
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/wish_alcohol_text">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RadioButton
+                            android:id="@+id/pos_wish_alcohol_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:fontFamily="@font/mont_regular"
+                            android:text="Положительное"
+                            android:textColor="#323232"
+                            android:textSize="16sp" />
+
+                        <RadioButton
+                            android:id="@+id/neutral_wish_alcohol_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginEnd="16dp"
+                            android:fontFamily="@font/mont_regular"
+                            android:text="Нейтральное"
+                            android:textColor="#323232"
+                            android:textSize="16sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="4dp">
+
+                        <RadioButton
+                            android:id="@+id/neg_wish_alcohol_button"
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
+                            android:fontFamily="@font/mont_regular"
+                            android:text="Отрицательное"
+                            android:textColor="#323232"
+                            android:textSize="16sp" />
+                    </TableRow>
+
+                </TableLayout>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/wish_animal_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/mont_semibold"
+                android:text="Наличие питомца"
+                android:textColor="#1A1A1A"
+                android:textSize="19sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/wish_alcohol_group" />
+
+            <RadioGroup
+                android:id="@+id/wish_animal_group"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/wish_animal_text">
+
+                <RadioButton
+                    android:id="@+id/con_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Против"
+                    android:textColor="#323232"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/aye_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="52dp"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Не против"
+                    android:textColor="#323232"
+                    android:textSize="16sp" />
+            </RadioGroup>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
 
     <ImageButton
         android:id="@+id/forward_button"
@@ -236,13 +1237,28 @@
         android:layout_height="48dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="66dp"
+        android:background="@drawable/rounded_button"
         android:backgroundTint="#323232"
         android:clickable="true"
         android:rotationY="180"
-        android:background="@drawable/rounded_button"
-        app:srcCompat="@drawable/backwards"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/backwards" />
+
+    <ImageButton
+        android:id="@+id/backward_button"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="66dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="#323232"
+        android:clickable="true"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/forward_button"
+        app:srcCompat="@drawable/backwards" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
