@@ -18,7 +18,7 @@ class SearchActivity : AppCompatActivity() {
         val formButton: Button = findViewById(R.id.form_button)
 
         menuButton.setOnClickListener {
-            val intent = Intent(this, GroupsActivity::class.java)
+            val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent)
         }
 
@@ -30,6 +30,7 @@ class SearchActivity : AppCompatActivity() {
         formButton.setOnClickListener {
             val intent = Intent(this, FormActivity::class.java)
             startActivity(intent)
+            //TODO Добавить проверку на факт создания пользователем анкеты
         }
 
         settingsButton.setOnClickListener {

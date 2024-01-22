@@ -65,7 +65,7 @@ class PaidHouseActivity : AppCompatActivity() {
         }
 
         menuButton.setOnClickListener {
-            val intent = Intent(this, GroupsActivity::class.java)
+            val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent)
         }
 
@@ -78,6 +78,8 @@ class PaidHouseActivity : AppCompatActivity() {
             val intent = Intent(this, SettingsActivity::class.java)
             startActivity(intent)
         }
+
+        //TODO Добавить отображение постов
 
     }
 

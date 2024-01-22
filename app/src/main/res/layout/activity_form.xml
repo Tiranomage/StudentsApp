@@ -239,7 +239,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="#F6F9FF"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/form_title">
 
@@ -507,7 +507,7 @@
                 android:layout_marginTop="16dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/self_photo"
-                tools:srcCompat="@tools:sample/avatars" />
+                app:srcCompat="@drawable/group_photo" />
 
             <ImageView
                 android:id="@+id/second_photo"
@@ -517,7 +517,7 @@
                 android:layout_marginTop="16dp"
                 app:layout_constraintStart_toEndOf="@id/first_photo"
                 app:layout_constraintTop_toBottomOf="@id/self_photo"
-                tools:srcCompat="@tools:sample/avatars" />
+                app:srcCompat="@drawable/group_photo" />
 
             <ImageView
                 android:id="@+id/third_photo"
@@ -527,7 +527,7 @@
                 android:layout_marginTop="8dp"
                 app:layout_constraintStart_toEndOf="@id/first_photo"
                 app:layout_constraintTop_toBottomOf="@id/second_photo"
-                tools:srcCompat="@tools:sample/avatars" />
+                app:srcCompat="@drawable/group_photo" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
@@ -537,7 +537,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="#F6F9FF"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/form_title">
 
@@ -575,11 +575,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="51dp"
                 android:layout_marginTop="4dp"
+                android:background="@drawable/edit_text_view"
+                android:dropDownWidth="match_parent"
                 android:paddingStart="8dp"
                 android:paddingEnd="8dp"
-                android:background="@drawable/edit_text_view"
-                android:dropDownSelector="@color/black"
-                android:dropDownWidth="match_parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/flat_type" />
@@ -601,9 +600,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="51dp"
                 android:layout_marginTop="4dp"
+                android:background="@drawable/edit_text_view"
                 android:paddingStart="8dp"
                 android:paddingEnd="8dp"
-                android:background="@drawable/edit_text_view"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/district" />
@@ -698,9 +697,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="51dp"
                 android:layout_marginTop="4dp"
+                android:background="@drawable/edit_text_view"
                 android:paddingStart="8dp"
                 android:paddingEnd="8dp"
-                android:background="@drawable/edit_text_view"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/rental" />
@@ -800,7 +799,7 @@
                 android:layout_marginTop="16dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/flat_photo"
-                tools:srcCompat="@tools:sample/avatars" />
+                app:srcCompat="@drawable/rectangle_photo" />
 
             <ImageView
                 android:id="@+id/second_flat_photo"
@@ -810,7 +809,7 @@
                 android:layout_marginTop="16dp"
                 app:layout_constraintStart_toEndOf="@id/first_flat_photo"
                 app:layout_constraintTop_toBottomOf="@id/flat_photo"
-                tools:srcCompat="@tools:sample/avatars" />
+                app:srcCompat="@drawable/group_photo" />
 
             <ImageView
                 android:id="@+id/third_flat_photo"
@@ -820,7 +819,7 @@
                 android:layout_marginTop="8dp"
                 app:layout_constraintStart_toEndOf="@id/first_flat_photo"
                 app:layout_constraintTop_toBottomOf="@id/second_flat_photo"
-                tools:srcCompat="@tools:sample/avatars" />
+                app:srcCompat="@drawable/group_photo" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

@@ -24,7 +24,7 @@ class RentHouseActivity : AppCompatActivity() {
         }
 
         menuButton.setOnClickListener {
-            val intent = Intent(this, GroupsActivity::class.java)
+            val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent)
         }
 

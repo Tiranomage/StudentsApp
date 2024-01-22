@@ -150,7 +150,7 @@
         android:layout_width="match_parent"
         android:layout_height="92dp"
         android:layout_alignParentBottom="true"
-        android:backgroundTint="#FFFFFF"
+        android:background="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 

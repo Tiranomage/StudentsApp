@@ -20,7 +20,7 @@ class BuyRequestActivity : AppCompatActivity() {
         val buyReqButton: Button = findViewById(R.id.button_buy_req)
 
         menuButton.setOnClickListener {
-            val intent = Intent(this, GroupsActivity::class.java)
+            val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent)
         }
 

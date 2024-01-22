@@ -19,7 +19,7 @@ class PrivateDormActivity : AppCompatActivity() {
         val reqButton: Button = findViewById(R.id.private_dorm_button)
 
         menuButton.setOnClickListener {
-            val intent = Intent(this, GroupsActivity::class.java)
+            val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent)
         }
 

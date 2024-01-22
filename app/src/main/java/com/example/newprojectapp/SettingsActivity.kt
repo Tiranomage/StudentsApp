@@ -18,7 +18,7 @@ class SettingsActivity : AppCompatActivity() {
         val leaveButton: Button = findViewById(R.id.leave_button)
 
         menuButton.setOnClickListener {
-            val intent = Intent(this, GroupsActivity::class.java)
+            val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent)
         }
 

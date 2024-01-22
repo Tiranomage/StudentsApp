@@ -20,7 +20,7 @@ class PaidHousingActivity : AppCompatActivity() {
         val buyHouseButton: ImageButton = findViewById(R.id.buy_house_button)
 
         menuButton.setOnClickListener {
-            val intent = Intent(this, GroupsActivity::class.java)
+            val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent)
         }
 
