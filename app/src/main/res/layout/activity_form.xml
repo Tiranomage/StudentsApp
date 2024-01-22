@@ -38,8 +38,8 @@
         android:id="@+id/scroll1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:visibility="invisible"
         android:background="#F6F9FF"
+        android:visibility="invisible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/form_title">
 
@@ -316,57 +316,38 @@
             <RadioGroup
                 android:id="@+id/smoking_group"
                 android:layout_width="wrap_content"
-                android:layout_height="52dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/smoking">
 
-                <TableLayout
+                <RadioButton
+                    android:id="@+id/pos_smoke_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Положительное"
+                    android:textColor="#323232"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/neutral_smoke_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Нейтральное"
+                    android:textColor="#323232"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/neg_snoke_button"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <RadioButton
-                            android:id="@+id/pos_smoke_button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:fontFamily="@font/mont_regular"
-                            android:text="Положительное"
-                            android:textColor="#323232"
-                            android:textSize="16sp" />
-
-                        <RadioButton
-                            android:id="@+id/neutral_smoke_button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:layout_marginStart="32dp"
-                            android:layout_marginEnd="16dp"
-                            android:fontFamily="@font/mont_regular"
-                            android:text="Нейтральное"
-                            android:textColor="#323232"
-                            android:textSize="16sp" />
-
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="4dp">
-
-                        <RadioButton
-                            android:id="@+id/neg_snoke_button"
-                            android:layout_width="match_parent"
-                            android:layout_height="24dp"
-                            android:fontFamily="@font/mont_regular"
-                            android:text="Отрицательное"
-                            android:textColor="#323232"
-                            android:textSize="16sp" />
-                    </TableRow>
-
-                </TableLayout>
+                    android:layout_height="24dp"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Отрицательное"
+                    android:textColor="#323232"
+                    android:textSize="16sp" />
 
             </RadioGroup>
 
@@ -385,57 +366,38 @@
             <RadioGroup
                 android:id="@+id/alcohol_group"
                 android:layout_width="wrap_content"
-                android:layout_height="52dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/alcohol_text">
 
-                <TableLayout
+                <RadioButton
+                    android:id="@+id/pos_alcohol_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Положительное"
+                    android:textColor="#323232"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/neutral_alcohol_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Нейтральное"
+                    android:textColor="#323232"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/neg_alcohol_button"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <RadioButton
-                            android:id="@+id/pos_alcohol_button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:fontFamily="@font/mont_regular"
-                            android:text="Положительное"
-                            android:textColor="#323232"
-                            android:textSize="16sp" />
-
-                        <RadioButton
-                            android:id="@+id/neutral_alcohol_button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:layout_marginStart="32dp"
-                            android:layout_marginEnd="16dp"
-                            android:fontFamily="@font/mont_regular"
-                            android:text="Нейтральное"
-                            android:textColor="#323232"
-                            android:textSize="16sp" />
-
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="4dp">
-
-                        <RadioButton
-                            android:id="@+id/neg_alcohol_button"
-                            android:layout_width="match_parent"
-                            android:layout_height="24dp"
-                            android:fontFamily="@font/mont_regular"
-                            android:text="Отрицательное"
-                            android:textColor="#323232"
-                            android:textSize="16sp" />
-                    </TableRow>
-
-                </TableLayout>
+                    android:layout_height="24dp"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Отрицательное"
+                    android:textColor="#323232"
+                    android:textSize="16sp" />
 
             </RadioGroup>
 
@@ -575,7 +537,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:background="#F6F9FF"
-        android:visibility="invisible"
+        android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/form_title">
 
@@ -613,7 +575,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="51dp"
                 android:layout_marginTop="4dp"
-                android:background="@drawable/edit_text_style"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:background="@drawable/edit_text_view"
+                android:dropDownSelector="@color/black"
                 android:dropDownWidth="match_parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -625,7 +590,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:fontFamily="@font/mont_semibold"
-                android:text="Тип жилья"
+                android:text="Район"
                 android:textColor="#1A1A1A"
                 android:textSize="19sp"
                 app:layout_constraintStart_toStartOf="parent"
@@ -636,7 +601,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="51dp"
                 android:layout_marginTop="4dp"
-                android:background="@drawable/edit_text_style"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:background="@drawable/edit_text_view"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/district" />
@@ -731,7 +698,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="51dp"
                 android:layout_marginTop="4dp"
-                android:background="@drawable/edit_text_style"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:background="@drawable/edit_text_view"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/rental" />
@@ -903,7 +872,6 @@
                 android:ems="10"
                 android:fontFamily="@font/mont_regular"
                 android:hint="С"
-                android:inputType="date"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 android:textColor="#606060"
@@ -933,7 +901,6 @@
                 android:ems="10"
                 android:fontFamily="@font/mont_regular"
                 android:hint="По"
-                android:inputType="date"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
                 android:textColor="#606060"
@@ -956,55 +923,38 @@
             <RadioGroup
                 android:id="@+id/wish_gender_group"
                 android:layout_width="wrap_content"
-                android:layout_height="52dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/wish_gender">
 
-                <TableLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                <RadioButton
+                    android:id="@+id/female_wish_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Женский"
+                    android:textColor="#323232"
+                    android:textSize="16sp" />
 
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                <RadioButton
+                    android:id="@+id/male_wish_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Мужской"
+                    android:textColor="#323232"
+                    android:textSize="16sp" />
 
-                        <RadioButton
-                            android:id="@+id/female_wish_button"
-                            android:layout_width="match_parent"
-                            android:layout_height="24dp"
-                            android:fontFamily="@font/mont_regular"
-                            android:text="Женский"
-                            android:textColor="#323232"
-                            android:textSize="16sp" />
-
-                        <RadioButton
-                            android:id="@+id/male_wish_button"
-                            android:layout_width="match_parent"
-                            android:layout_height="24dp"
-                            android:layout_marginStart="52dp"
-                            android:fontFamily="@font/mont_regular"
-                            android:text="Мужской"
-                            android:textColor="#323232"
-                            android:textSize="16sp" />
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="4dp">
-
-                        <RadioButton
-                            android:id="@+id/free_button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:fontFamily="@font/mont_regular"
-                            android:text="Любой"
-                            android:textColor="#323232"
-                            android:textSize="16sp" />
-                    </TableRow>
-                </TableLayout>
+                <RadioButton
+                    android:id="@+id/free_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Любой"
+                    android:textColor="#323232"
+                    android:textSize="16sp" />
 
             </RadioGroup>
 
@@ -1064,57 +1014,39 @@
             <RadioGroup
                 android:id="@+id/wish_smoking_group"
                 android:layout_width="wrap_content"
-                android:layout_height="52dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
+                android:orientation="vertical"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/wish_smoking">
 
-                <TableLayout
+                <RadioButton
+                    android:id="@+id/pos_wish_smoke_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Положительное"
+                    android:textColor="#323232"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/neutral_wish_smoke_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Нейтральное"
+                    android:textColor="#323232"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/neg_wish_snoke_button"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <RadioButton
-                            android:id="@+id/pos_wish_smoke_button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:fontFamily="@font/mont_regular"
-                            android:text="Положительное"
-                            android:textColor="#323232"
-                            android:textSize="16sp" />
-
-                        <RadioButton
-                            android:id="@+id/neutral_wish_smoke_button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:layout_marginStart="32dp"
-                            android:layout_marginEnd="16dp"
-                            android:fontFamily="@font/mont_regular"
-                            android:text="Нейтральное"
-                            android:textColor="#323232"
-                            android:textSize="16sp" />
-
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="4dp">
-
-                        <RadioButton
-                            android:id="@+id/neg_wish_snoke_button"
-                            android:layout_width="match_parent"
-                            android:layout_height="24dp"
-                            android:fontFamily="@font/mont_regular"
-                            android:text="Отрицательное"
-                            android:textColor="#323232"
-                            android:textSize="16sp" />
-                    </TableRow>
-
-                </TableLayout>
+                    android:layout_height="24dp"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Отрицательное"
+                    android:textColor="#323232"
+                    android:textSize="16sp" />
 
             </RadioGroup>
 
@@ -1133,57 +1065,39 @@
             <RadioGroup
                 android:id="@+id/wish_alcohol_group"
                 android:layout_width="wrap_content"
-                android:layout_height="52dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
+                android:orientation="vertical"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/wish_alcohol_text">
 
-                <TableLayout
+                <RadioButton
+                    android:id="@+id/pos_wish_alcohol_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Положительное"
+                    android:textColor="#323232"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/neutral_wish_alcohol_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Нейтральное"
+                    android:textColor="#323232"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/neg_wish_alcohol_button"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <RadioButton
-                            android:id="@+id/pos_wish_alcohol_button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:fontFamily="@font/mont_regular"
-                            android:text="Положительное"
-                            android:textColor="#323232"
-                            android:textSize="16sp" />
-
-                        <RadioButton
-                            android:id="@+id/neutral_wish_alcohol_button"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:layout_marginStart="32dp"
-                            android:layout_marginEnd="16dp"
-                            android:fontFamily="@font/mont_regular"
-                            android:text="Нейтральное"
-                            android:textColor="#323232"
-                            android:textSize="16sp" />
-
-                    </TableRow>
-
-                    <TableRow
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginTop="4dp">
-
-                        <RadioButton
-                            android:id="@+id/neg_wish_alcohol_button"
-                            android:layout_width="match_parent"
-                            android:layout_height="24dp"
-                            android:fontFamily="@font/mont_regular"
-                            android:text="Отрицательное"
-                            android:textColor="#323232"
-                            android:textSize="16sp" />
-                    </TableRow>
-
-                </TableLayout>
+                    android:layout_height="24dp"
+                    android:fontFamily="@font/mont_regular"
+                    android:text="Отрицательное"
+                    android:textColor="#323232"
+                    android:textSize="16sp" />
 
             </RadioGroup>
 

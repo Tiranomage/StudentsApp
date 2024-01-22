@@ -6,6 +6,13 @@
         android:maxSdkVersion="32"
         android:name="android.permission.INTERNET" />
 
+    <uses-permission
+        android:maxSdkVersion="32"
+        android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission
+        android:maxSdkVersion="32"
+        android:name="android.permission.ACCESS_NETWORK_STATE" />
     <!-- android.permission.READ_EXTERNAL_STORAGE -->
 
     <application

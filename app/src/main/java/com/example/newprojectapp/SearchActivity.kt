@@ -31,5 +31,15 @@ class SearchActivity : AppCompatActivity() {
             val intent = Intent(this, FormActivity::class.java)
             startActivity(intent)
         }
+
+        settingsButton.setOnClickListener {
+            val intent = Intent(this, SettingsActivity::class.java)
+            startActivity(intent)
+        }
+
+        houseButton.setOnClickListener {
+            val intent = Intent(this, HouseActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

@@ -45,15 +45,23 @@ import java.sql.Statement
 }*/
 
 class DBHelper() {
-    private val url = "jdbc:postgresql://rc1b-2qanv6f4tdpmgnud.mdb.yandexcloud.net:6432/db1?targetServerType=master&ssl=false&sslmode=disable"
-    private val user = "user1"
-    private val password = "123456789"
+    val url = "jdbc:mysql://localhost:3306/urfuaparts"
+    val user = "root"
+    val password = ""
 
     init {
         try {
-            Class.forName("org.postgresql.Driver")
+            Class.forName("com.mysql.cj.jdbc.Driver")
         } catch (e: ClassNotFoundException) {
             e.printStackTrace()
+        }
+    }
+
+    companion object {
+        private val instance: DBHelper = DBHelper()
+
+        fun getInstance(): DBHelper {
+            return instance
         }
     }
 
